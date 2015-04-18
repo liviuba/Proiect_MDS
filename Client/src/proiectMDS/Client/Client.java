@@ -1,9 +1,9 @@
-package imv.examples.Proprietar;
+package proiectMDS.Client;
 
 import android.app.Activity;
 import android.os.Bundle;
 
-public class Proprietar extends Activity
+public class Client extends Activity
 {
     /** Called when the activity is first created. */
     @Override
