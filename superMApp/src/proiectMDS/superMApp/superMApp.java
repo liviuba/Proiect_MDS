@@ -1,9 +1,9 @@
-package proiectMDS.Client;
+package proiectMDS.superMApp;
 
 import android.app.Activity;
 import android.os.Bundle;
 
-public class Client extends Activity
+public class superMApp extends Activity
 {
     /** Called when the activity is first created. */
     @Override
