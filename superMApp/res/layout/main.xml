@@ -3,11 +3,12 @@
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    >
-<TextView
-    android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
-    android:text="Hello World, superMApp"
-    />
+		>
+		<Button 
+			android:id="@+id/asdf"
+			android:layout_height="wrap_content"
+			android:layout_width="fill_parent"
+			android:text="Add supervisor"
+		/>
 </LinearLayout>
 
