@@ -5,7 +5,7 @@
     android:layout_height="fill_parent"
 		>
 		<Button 
-			android:id="@+id/asdf"
+			android:id="@+id/pick_contact_b"
 			android:layout_height="wrap_content"
 			android:layout_width="fill_parent"
 			android:text="Add supervisor"

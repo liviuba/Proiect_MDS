@@ -8,6 +8,9 @@
 ###
 *.class
 
+##vim .swp files
+*.swp
+
 #Generated files
 bin/
 gen/
