@@ -17,17 +17,15 @@ public class MusicService extends Service {
     public IBinder onBind(Intent intent) {
         return null;
     }
-
+    @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
-        //TODO do something useful
         mp.setLooping(true);
         mp.start();
         return Service.START_NOT_STICKY;
     }
-
+    @Override
     public void onCreate(){
-        Toast.makeText(this, "sunt in oncreate", Toast.LENGTH_LONG).show();
-        Log.i("aa","sunt aici");
+        Log.i("MusicService.onCreate()",":sunt aici");
         mp = MediaPlayer.create(this,R.raw.alarm);
     }
 }

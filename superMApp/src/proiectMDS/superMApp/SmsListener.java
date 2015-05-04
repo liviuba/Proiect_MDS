@@ -23,6 +23,7 @@ import android.widget.Toast;
  * Created by andrei on 03.05.2015.
  */
 public class SmsListener extends BroadcastReceiver {
+
     @Override
     public void onReceive(Context context, Intent intent) {
         final SmsManager sms = SmsManager.getDefault();
@@ -35,7 +36,7 @@ public class SmsListener extends BroadcastReceiver {
                 final Object[] pdusObj = (Object[]) bundle.get("pdus");
 
                 for (int i = 0; i < pdusObj.length; i++) {
-
+                    //reading the SMS
                     SmsMessage currentMessage = SmsMessage.createFromPdu((byte[]) pdusObj[i]);
                     String phoneNumber = currentMessage.getDisplayOriginatingAddress();
 
@@ -44,22 +45,12 @@ public class SmsListener extends BroadcastReceiver {
 
                     Log.i("SmsReceiver", "senderNum: " + senderNum + "; message: " + message);
 
-
-                    // Show alert
-                    int duration = Toast.LENGTH_LONG;
-                    Toast toast = Toast.makeText(context, "senderNum: "+ senderNum + ", MESSAGE: " + message, duration);
-                    toast.show();
-
-//                    MediaPlayer player = MediaPlayer.create(context, R.raw.alarm);
-//                    //player.setWakeMode(context, PowerManager.PARTIAL_WAKE_LOCK);
-//                    player.setLooping(true);
-//                    player.start();
-//                    Intent int1 = new Intent(context,SmsReceived.class);
-//                    context.startActivity(int1);
-//                    Intent serviceIntent = new Intent(context,MyService.class);
-//                    context.startService(serviceIntent);
-                    Intent serv = new Intent(context,MusicService.class);
-                    context.startService(serv);
+                    // start the alarm through a Service if the sms is a notification from
+                    //someone who is in danger
+                    if (someoneInDanger(message)) {
+                        Intent serv = new Intent(context, MusicService.class);
+                        context.startService(serv);
+                    }
 
 
                 } // end for loop
@@ -69,5 +60,11 @@ public class SmsListener extends BroadcastReceiver {
             Log.e("SmsReceiver", "Exception smsReceiver" +e);
 
         }
+    }
+
+    private boolean someoneInDanger(String message){
+        //to be implemented after we decide what is the structure of
+        // a notification from someone in danger
+        return true;
     }
 }
