@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">superMApp</string>
+	<string name="app_name">superMApp</string>
+	<string name="input_password_label"> Authenticate, madafaca! </string>
+	<string name="input_password_button"> Submit </string>
+	<string name="supervisor_token_hint"> Supervisor\'s token goes here </string>
+	<string name="input_password_hint"> Your password goes here </string>
 </resources>
