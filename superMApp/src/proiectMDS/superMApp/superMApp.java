@@ -17,6 +17,9 @@ import android.database.Cursor;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import java.util.ArrayList;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.widget.AdapterView;
 
 public class superMApp extends Activity
 {
@@ -65,12 +68,50 @@ public class superMApp extends Activity
 			super.onResume();
 
 			ListView supervisorListView = (ListView) findViewById( R.id.supervisor_list );
-			ArrayAdapter<String> supervisorAdapter = new ArrayAdapter<String> (this, android.R.layout.simple_list_item_1, supervisorList);
+			final ArrayAdapter<String> supervisorAdapter = new ArrayAdapter<String> (this, android.R.layout.simple_list_item_1, supervisorList);
 			supervisorListView.setAdapter(supervisorAdapter);
+			//delete contact from list
+			supervisorListView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
+				@Override
+				public void onItemClick(AdapterView<?> a, View v, int position, long id){
+					AlertDialog.Builder adb = new AlertDialog.Builder(superMApp.this);
+					adb.setTitle("Delete?");
+					adb.setMessage("Are you sure you want to delete this contact?");
+					adb.setNegativeButton("Cancel", null);
+					final int position_final = position;
+					adb.setPositiveButton("OK", new AlertDialog.OnClickListener(){
+						@Override
+						public void onClick(DialogInterface dialog, int which){
+							supervisorList.remove(position_final);
+							supervisorAdapter.notifyDataSetChanged();
+						}
+					});
+					adb.show();
+				}
+			});
 
 			ListView trackedListView = (ListView) findViewById( R.id.tracked_list);
-			ArrayAdapter<String> trackedAdapter = new ArrayAdapter<String> (this, android.R.layout.simple_list_item_1, trackedList);
+			final ArrayAdapter<String> trackedAdapter = new ArrayAdapter<String> (this, android.R.layout.simple_list_item_1, trackedList);
 			trackedListView.setAdapter(trackedAdapter);
+			//delete contact from list
+			trackedListView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
+				@Override
+				public void onItemClick(AdapterView<?> a, View v, int position, long id){
+					AlertDialog.Builder adb = new AlertDialog.Builder(superMApp.this);
+					adb.setTitle("Delete?");
+					adb.setMessage("Are you sure you want to delete this contact?");
+					adb.setNegativeButton("Cancel", null);
+					final int position_final = position;
+					adb.setPositiveButton("OK", new AlertDialog.OnClickListener(){
+						@Override
+						public void onClick(DialogInterface dialog, int which){
+							trackedList.remove(position_final);
+							trackedAdapter.notifyDataSetChanged();
+						}
+					});
+					adb.show();
+				}
+			});
 		}
 
 		@Override
