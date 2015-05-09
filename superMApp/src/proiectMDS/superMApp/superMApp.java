@@ -28,6 +28,7 @@ public class superMApp extends Activity
 			//specifies in whcih list to put the contact, after login; Can't propagate through from onClick because of PICK_CONTACT_REQUEST
 		int tempListSwitch = 0;	
 		String password="tomato";//FIXME: For the sake of baby pandas, store this hashed
+		// Entry format :  <Contact name> | <Contact phone #>
 		ArrayList<String> supervisorList = new ArrayList<String>();
 		ArrayList<String> trackedList = new ArrayList<String>();
 
@@ -83,15 +84,15 @@ public class superMApp extends Activity
 						//FIXME: don't let it through
 					}
 					else{
-						String newSupervisor = new String();
-						newSupervisor = data.getExtras().getString("CONTACT_ID") + " | "+ data.getExtras().getString("CONTACT_PHONE_NUM");
+						String newContact = new String();
+						newContact = data.getExtras().getString("CONTACT_NAME") + " | "+ data.getExtras().getString("CONTACT_PHONE_NUM");
 
 						switch(tempListSwitch){
 							case ADD_TO_SUPERVISOR:
-								supervisorList.add(newSupervisor);
+								supervisorList.add(newContact);
 								break;
 							case ADD_TO_TRACKED:
-								trackedList.add(newSupervisor);
+								trackedList.add(newContact);
 								break;
 						}
 						tempListSwitch = 0;
@@ -130,7 +131,7 @@ public class superMApp extends Activity
 						goToPasswd.putExtra("PASSWORD",password);
 						// These two get propagated through login screen back to the main activity
 						// TODO: does it make more sense to keep them in some temp variables in the activity?
-						goToPasswd.putExtra("CONTACT_ID",contactName);
+						goToPasswd.putExtra("CONTACT_NAME",contactName);
 						goToPasswd.putExtra("CONTACT_PHONE_NUM",contactPhoneNum);
 
 						startActivityForResult( goToPasswd, AUTHENTICATE_REQUEST );
