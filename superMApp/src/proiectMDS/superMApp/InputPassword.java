@@ -11,8 +11,8 @@ import android.content.Intent;
 
 public class InputPassword extends Activity{
 	String password;
-	String supervisorID;
-	String supervisorPhoneNum;
+	String contactName;
+	String contactPhoneNum;
 	
 	@Override
 	public void onCreate(Bundle savedInstanceState){
@@ -23,12 +23,12 @@ public class InputPassword extends Activity{
 			Bundle extras = getIntent().getExtras();
 			if(extras == null){
 				Log.e("superMApp:InputPassword:onCreate","Oops! Somehow nothing got put in the intent");
-				password = supervisorID = supervisorPhoneNum = "garbage";
+				password = contactName = contactPhoneNum = "garbage";
 			}
 			else{
 				password = extras.getString("PASSWORD");
-				supervisorID = extras.getString("SUPERVISOR_ID");
-				supervisorPhoneNum = extras.getString("SUPERVISOR_PHONE_NUM");
+				contactName = extras.getString("CONTACT_NAME");
+				contactPhoneNum = extras.getString("CONTACT_PHONE_NUM");
 			}
 		}
 		else{
@@ -43,14 +43,11 @@ public class InputPassword extends Activity{
 				Log.e("superMApp:InputPassword","Submit button pressed");
 
 				EditText userPasswd_et = (EditText) findViewById(R.id.input_password_et);
-				EditText supervisorToken_et = (EditText) findViewById(R.id.supervisor_token_et);
-				if( (userPasswd_et.getText().toString()!=null && !userPasswd_et.getText().toString().isEmpty()) && 
-						( supervisorToken_et.getText().toString()!=null && !supervisorToken_et.getText().toString().isEmpty())){
+				if( (userPasswd_et.getText().toString()!=null && !userPasswd_et.getText().toString().isEmpty()) ){
 					if( password.equals( userPasswd_et.getText().toString()) ){
 						Intent returnIntent = new Intent();
-						returnIntent.putExtra("SUPERVISOR_ID",supervisorID);
-						returnIntent.putExtra("SUPERVISOR_PHONE_NUM",supervisorPhoneNum);
-						returnIntent.putExtra("SUPERVISOR_TOKEN", supervisorToken_et.getText().toString());
+						returnIntent.putExtra("CONTACT_NAME",contactName);
+						returnIntent.putExtra("CONTACT_PHONE_NUM",contactPhoneNum);
 						setResult(RESULT_OK, returnIntent);
 						finish();
 					}
@@ -58,9 +55,6 @@ public class InputPassword extends Activity{
 						Toast.makeText(getApplicationContext(), "Wrong password!", Toast.LENGTH_SHORT).show();
 				}
 				else{
-						if(supervisorToken_et.getText().toString().isEmpty() || supervisorToken_et.getText() == null)
-							Toast.makeText(getApplicationContext(), "Enter supervisor token!", Toast.LENGTH_SHORT).show();
-						else
 							Toast.makeText(getApplicationContext(), "Enter a password!", Toast.LENGTH_SHORT).show();
 				}
 			}
