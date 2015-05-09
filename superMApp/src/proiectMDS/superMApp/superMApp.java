@@ -84,7 +84,7 @@ public class superMApp extends Activity
 					}
 					else{
 						String newSupervisor = new String();
-						newSupervisor = data.getExtras().getString("SUPERVISOR_ID") + " | "+ data.getExtras().getString("SUPERVISOR_PHONE_NUM");
+						newSupervisor = data.getExtras().getString("CONTACT_ID") + " | "+ data.getExtras().getString("CONTACT_PHONE_NUM");
 
 						switch(tempListSwitch){
 							case ADD_TO_SUPERVISOR:
@@ -95,9 +95,6 @@ public class superMApp extends Activity
 								break;
 						}
 						tempListSwitch = 0;
-
-						Log.e("ASDFTEST",data.getExtras().getString("SUPERVISOR_ID"));
-						Log.e("ASDFTEST",data.getExtras().getString("SUPERVISOR_PHONE_NUM"));
 					}
 					break;
 				case PICK_CONTACT_REQUEST:
@@ -133,8 +130,8 @@ public class superMApp extends Activity
 						goToPasswd.putExtra("PASSWORD",password);
 						// These two get propagated through login screen back to the main activity
 						// TODO: does it make more sense to keep them in some temp variables in the activity?
-						goToPasswd.putExtra("SUPERVISOR_ID",contactName);
-						goToPasswd.putExtra("SUPERVISOR_PHONE_NUM",contactPhoneNum);
+						goToPasswd.putExtra("CONTACT_ID",contactName);
+						goToPasswd.putExtra("CONTACT_PHONE_NUM",contactPhoneNum);
 
 						startActivityForResult( goToPasswd, AUTHENTICATE_REQUEST );
 

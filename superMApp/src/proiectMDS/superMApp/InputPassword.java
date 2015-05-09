@@ -11,8 +11,8 @@ import android.content.Intent;
 
 public class InputPassword extends Activity{
 	String password;
-	String supervisorID;
-	String supervisorPhoneNum;
+	String contactID;
+	String contactPhoneNum;
 	
 	@Override
 	public void onCreate(Bundle savedInstanceState){
@@ -23,12 +23,12 @@ public class InputPassword extends Activity{
 			Bundle extras = getIntent().getExtras();
 			if(extras == null){
 				Log.e("superMApp:InputPassword:onCreate","Oops! Somehow nothing got put in the intent");
-				password = supervisorID = supervisorPhoneNum = "garbage";
+				password = contactID = contactPhoneNum = "garbage";
 			}
 			else{
 				password = extras.getString("PASSWORD");
-				supervisorID = extras.getString("SUPERVISOR_ID");
-				supervisorPhoneNum = extras.getString("SUPERVISOR_PHONE_NUM");
+				contactID = extras.getString("CONTACT_ID");
+				contactPhoneNum = extras.getString("CONTACT_PHONE_NUM");
 			}
 		}
 		else{
@@ -46,8 +46,8 @@ public class InputPassword extends Activity{
 				if( (userPasswd_et.getText().toString()!=null && !userPasswd_et.getText().toString().isEmpty()) ){
 					if( password.equals( userPasswd_et.getText().toString()) ){
 						Intent returnIntent = new Intent();
-						returnIntent.putExtra("SUPERVISOR_ID",supervisorID);
-						returnIntent.putExtra("SUPERVISOR_PHONE_NUM",supervisorPhoneNum);
+						returnIntent.putExtra("CONTACT_ID",contactID);
+						returnIntent.putExtra("CONTACT_PHONE_NUM",contactPhoneNum);
 						setResult(RESULT_OK, returnIntent);
 						finish();
 					}
