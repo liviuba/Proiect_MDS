@@ -43,14 +43,11 @@ public class InputPassword extends Activity{
 				Log.e("superMApp:InputPassword","Submit button pressed");
 
 				EditText userPasswd_et = (EditText) findViewById(R.id.input_password_et);
-				EditText supervisorToken_et = (EditText) findViewById(R.id.supervisor_token_et);
-				if( (userPasswd_et.getText().toString()!=null && !userPasswd_et.getText().toString().isEmpty()) && 
-						( supervisorToken_et.getText().toString()!=null && !supervisorToken_et.getText().toString().isEmpty())){
+				if( (userPasswd_et.getText().toString()!=null && !userPasswd_et.getText().toString().isEmpty()) ){
 					if( password.equals( userPasswd_et.getText().toString()) ){
 						Intent returnIntent = new Intent();
 						returnIntent.putExtra("SUPERVISOR_ID",supervisorID);
 						returnIntent.putExtra("SUPERVISOR_PHONE_NUM",supervisorPhoneNum);
-						returnIntent.putExtra("SUPERVISOR_TOKEN", supervisorToken_et.getText().toString());
 						setResult(RESULT_OK, returnIntent);
 						finish();
 					}
@@ -58,9 +55,6 @@ public class InputPassword extends Activity{
 						Toast.makeText(getApplicationContext(), "Wrong password!", Toast.LENGTH_SHORT).show();
 				}
 				else{
-						if(supervisorToken_et.getText().toString().isEmpty() || supervisorToken_et.getText() == null)
-							Toast.makeText(getApplicationContext(), "Enter supervisor token!", Toast.LENGTH_SHORT).show();
-						else
 							Toast.makeText(getApplicationContext(), "Enter a password!", Toast.LENGTH_SHORT).show();
 				}
 			}
