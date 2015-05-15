@@ -1,12 +1,17 @@
 #Built application files
 *.apk
 *ap_
+*.bin
+*.jar
 
 #Files from dex
 *.dex
 
 ###
 *.class
+
+##vim .swp files
+*.swp
 
 #Generated files
 superMApp/app/build
