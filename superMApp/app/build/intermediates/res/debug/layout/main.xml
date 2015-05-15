@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+		>
+		<Button 
+			android:id="@+id/add_supervisor"
+			android:layout_height="wrap_content"
+			android:layout_width="fill_parent"
+			android:text="Add supervisor"
+			/>
+		<Button
+			android:id="@+id/add_tracked"
+			android:layout_height="wrap_content"
+			android:layout_width="fill_parent"
+			android:text="Add tracked"
+			/>
+		<ListView
+			android:id="@+id/supervisor_list"
+			android:layout_width = "fill_parent"
+			android:layout_height = "wrap_content"
+			android:dividerHeight = "0.1dp"
+			android:divider = "#0000CC"
+			android:background = "#FF0000"
+			/>
+		<ListView
+			android:id="@+id/tracked_list"
+			android:layout_width = "fill_parent"
+			android:layout_height = "wrap_content"
+			android:dividerHeight = "0.1dp"
+			android:divider = "#0000CC"
+			android:background = "#00FF00"
+			/>
+
+</LinearLayout>
+
+<!-- From: file:/home/andrei/Desktop/branza/Proiect_MDS/superMApp/app/src/main/res/layout/main.xml -->
