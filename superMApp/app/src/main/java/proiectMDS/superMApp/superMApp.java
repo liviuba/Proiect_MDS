@@ -6,20 +6,21 @@
 package proiectMDS.superMApp;
 
 import android.app.Activity;
-import android.os.Bundle;
-import android.widget.Button;
-import android.view.View;
-import android.content.Intent;
-import android.net.Uri;
-import android.provider.ContactsContract;
-import android.util.Log;
-import android.database.Cursor;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
-import java.util.ArrayList;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
+import android.database.Cursor;
+import android.net.Uri;
+import android.os.Bundle;
+import android.provider.ContactsContract;
+import android.util.Log;
+import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.ListView;
+
+import java.util.ArrayList;
 
 public class superMApp extends Activity
 {
@@ -33,7 +34,7 @@ public class superMApp extends Activity
 		String password="tomato";//FIXME: For the sake of baby pandas, store this hashed
 		// Entry format :  <Contact name> | <Contact phone #>
 		ArrayList<String> supervisorList = new ArrayList<String>();
-		ArrayList<String> trackedList = new ArrayList<String>();
+		public static ArrayList<String> trackedList = new ArrayList<String>();
 
     @Override
     public void onCreate(Bundle savedInstanceState)
