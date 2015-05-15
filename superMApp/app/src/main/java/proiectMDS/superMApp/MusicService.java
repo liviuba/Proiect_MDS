@@ -4,9 +4,7 @@ import android.app.Service;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.IBinder;
-import android.os.PowerManager;
 import android.util.Log;
-import android.widget.Toast;
 
 /**
  * Created by andrei on 03.05.2015.
@@ -17,6 +15,7 @@ public class MusicService extends Service {
     public IBinder onBind(Intent intent) {
         return null;
     }
+
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
         mp.setLooping(true);
@@ -25,7 +24,14 @@ public class MusicService extends Service {
     }
     @Override
     public void onCreate(){
-        Log.i("MusicService.onCreate()",":sunt aici");
         mp = MediaPlayer.create(this,R.raw.alarm);
+        Log.i("MusicService.onCreate()", ":Created the Media Player");
+    }
+
+    @Override
+    public void onDestroy() {
+        mp.stop();
+        stopSelf();
+        super.onDestroy();
     }
 }
