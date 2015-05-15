@@ -121,7 +121,7 @@ public class superMApp extends Activity
 			switch(requestCode){
 				case AUTHENTICATE_REQUEST:
 					if(resultCode == Activity.RESULT_CANCELED){
-						Log.e("superMApp:onActivityResult:switch(requestCode)", "Bad stuff happened\n");
+						Log.e("onActRes:switch()", "Bad stuff happened\n");
 						//FIXME: don't let it through
 					}
 					else{
@@ -179,7 +179,7 @@ public class superMApp extends Activity
 
 						}
 						else{
-							Log.e("superMApp:onActivityResult","No first entry for contact DB cursor");
+							Log.e("onActivityResult","No first entry for contact DB cursor");
 						}
 						
 				}

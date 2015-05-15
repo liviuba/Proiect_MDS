@@ -22,7 +22,7 @@ public class InputPassword extends Activity{
 		if(savedInstanceState == null){	//freshly called, never put in background/killed
 			Bundle extras = getIntent().getExtras();
 			if(extras == null){
-				Log.e("superMApp:InputPassword:onCreate","Oops! Somehow nothing got put in the intent");
+				Log.e("InputPassword:onCreate","Oops! Somehow nothing got put in the intent");
 				password = contactName = contactPhoneNum = "garbage";
 			}
 			else{
