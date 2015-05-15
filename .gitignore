@@ -14,8 +14,10 @@
 *.swp
 
 #Generated files
-bin/
-gen/
+superMApp/app/build
+superMApp/build
+superMapp/bin
+superMapp/gen
 
 #Local config files
 local.properties
