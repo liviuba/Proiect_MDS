@@ -40,16 +40,16 @@ public class superMApp extends Activity
     public void onCreate(Bundle savedInstanceState)
     {
 			super.onCreate(savedInstanceState);
-			setContentView(R.layout.main);
+			setContentView(R.layout.activity_super_mapp);
 
 			Button addSupervisorButton = (Button) findViewById(R.id.add_supervisor);
-			addSupervisorButton.setOnClickListener(new View.OnClickListener(){
+			addSupervisorButton.setOnClickListener(new View.OnClickListener() {
 				@Override
-				public void onClick(View v){
-					Log.e("superMApp:OnClick","Picking a contact");
+				public void onClick(View v) {
+					Log.e("superMApp:OnClick", "Picking a contact");
 					tempListSwitch = ADD_TO_SUPERVISOR;
 					Intent pickContactIntent = new Intent(Intent.ACTION_PICK, ContactsContract.Contacts.CONTENT_URI);
-					startActivityForResult( pickContactIntent, PICK_CONTACT_REQUEST);
+					startActivityForResult(pickContactIntent, PICK_CONTACT_REQUEST);
 				}
 			});
 
@@ -60,6 +60,17 @@ public class superMApp extends Activity
 					tempListSwitch = ADD_TO_TRACKED;
 					Intent pickContactIntent = new Intent(Intent.ACTION_PICK, ContactsContract.Contacts.CONTENT_URI);
 					startActivityForResult( pickContactIntent, PICK_CONTACT_REQUEST);
+				}
+			});
+			Button startServiceButton = (Button)findViewById(R.id.startServiceButton);
+			startServiceButton.setOnClickListener(new View.OnClickListener() {
+				@Override
+				public void onClick(View v) {
+					Bundle contactsArrayBundle = new Bundle();
+					contactsArrayBundle.putStringArrayList("supervisorList",supervisorList);
+					Intent gpsIntent = new Intent(superMApp.this, GPS.class);
+					gpsIntent.putExtras(contactsArrayBundle);
+					startActivity(gpsIntent);
 				}
 			});
     }
@@ -127,7 +138,7 @@ public class superMApp extends Activity
 					}
 					else{
 						String newContact = new String();
-						newContact = data.getExtras().getString("CONTACT_NAME") + " | "+ data.getExtras().getString("CONTACT_PHONE_NUM");
+						newContact = data.getExtras().getString("CONTACT_NAME") + " ~ "+ data.getExtras().getString("CONTACT_PHONE_NUM");
 
 						switch(tempListSwitch){
 							case ADD_TO_SUPERVISOR:

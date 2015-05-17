@@ -2,172 +2,172 @@
 <items version="2" >
 
     <item
-        jar="/home/andrei/Desktop/branza/Proiect_MDS/superMApp/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.1.1/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="c95ba8152923e4872e86a82cfcba9a51c0214328">
-        <dex dex="/home/andrei/Desktop/branza/Proiect_MDS/superMApp/app/build/intermediates/pre-dexed/debug/classes-0602809b6e422d16081625e6478c285206964dd7.jar" />
-    </item>
-    <item
-        jar="/home/andrei/Desktop/branza/Proiect_MDS/superMApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appindexing/7.3.0/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="e35fae1b377c23aa5fd2d309a190c2d0f73d54ec">
-        <dex dex="/home/andrei/Desktop/branza/Proiect_MDS/superMApp/app/build/intermediates/pre-dexed/debug/classes-6f7c15846d681bab2d13757c4f5dc61630f8915a.jar" />
-    </item>
-    <item
-        jar="/home/andrei/Desktop/branza/Proiect_MDS/superMApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-panorama/7.3.0/classes.jar"
+        jar="C:\Users\Mara\Github\Proiect_MDS\superMApp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-panorama\7.3.0\classes.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="565a01f90f1529f73362707c4c185d0623a68782">
-        <dex dex="/home/andrei/Desktop/branza/Proiect_MDS/superMApp/app/build/intermediates/pre-dexed/debug/classes-627b669e699fd607a27ff53def6bb9df4630bc8d.jar" />
+        <dex dex="C:\Users\Mara\Github\Proiect_MDS\superMApp\app\build\intermediates\pre-dexed\debug\classes-d422fac4af7a6142415914f5643f5db27e5d9a02.jar" />
     </item>
     <item
-        jar="/home/andrei/Desktop/branza/Proiect_MDS/superMApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast/7.3.0/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="e5b9f5b0aa8dee788beb63d23832cb29ce771343">
-        <dex dex="/home/andrei/Desktop/branza/Proiect_MDS/superMApp/app/build/intermediates/pre-dexed/debug/classes-3a44ac1064240650a3f945f4dcda146e44ecc3f8.jar" />
-    </item>
-    <item
-        jar="/home/andrei/Desktop/branza/Proiect_MDS/superMApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics/7.3.0/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="9c9dea9e85aceb09d95df5e6f7bc8a43fc286068">
-        <dex dex="/home/andrei/Desktop/branza/Proiect_MDS/superMApp/app/build/intermediates/pre-dexed/debug/classes-986ceb80a19285cd97a5483224d88bdccbb2b027.jar" />
-    </item>
-    <item
-        jar="/home/andrei/Desktop/branza/Proiect_MDS/superMApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-games/7.3.0/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="3b4ff5c39dace8f3b4ab4cab8191785547a0815f">
-        <dex dex="/home/andrei/Desktop/branza/Proiect_MDS/superMApp/app/build/intermediates/pre-dexed/debug/classes-2e4b1bb8bdc5d0c980afe21e15f1732c5dd9267c.jar" />
-    </item>
-    <item
-        jar="/home/andrei/Desktop/branza/Proiect_MDS/superMApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/7.3.0/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="3988694bf9d8186ff97ad5cdfa4ed88b5010fe08">
-        <dex dex="/home/andrei/Desktop/branza/Proiect_MDS/superMApp/app/build/intermediates/pre-dexed/debug/classes-2778631ebda787d46d20e89966421564803fa816.jar" />
-    </item>
-    <item
-        jar="/home/andrei/Desktop/branza/Proiect_MDS/superMApp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.1.1/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="a3ff3c506644c820eb2bdf06e8339f72be578551">
-        <dex dex="/home/andrei/Desktop/branza/Proiect_MDS/superMApp/app/build/intermediates/pre-dexed/debug/classes-3a9775a2c8b952d3e9debb9c639a416e97a9fcdc.jar" />
-    </item>
-    <item
-        jar="/home/andrei/Desktop/branza/Proiect_MDS/superMApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/7.3.0/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="6046e5cdaf799120b7c56a5a061d80e8854c4d34">
-        <dex dex="/home/andrei/Desktop/branza/Proiect_MDS/superMApp/app/build/intermediates/pre-dexed/debug/classes-99419c9c8cc2d951dbd56e4e977c44d6f39a74ff.jar" />
-    </item>
-    <item
-        jar="/home/andrei/Desktop/branza/Proiect_MDS/superMApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wearable/7.3.0/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="e5bf453b070c1e39297986144960e45afa0fdfad">
-        <dex dex="/home/andrei/Desktop/branza/Proiect_MDS/superMApp/app/build/intermediates/pre-dexed/debug/classes-49baa280cfba6cf22b916c126fb0ebbea3de2918.jar" />
-    </item>
-    <item
-        jar="/home/andrei/Desktop/branza/Proiect_MDS/superMApp/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.1.1/libs/internal_impl-22.1.1.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="9e070ad32b2700b0343e8e0cccc437733d91ba3a">
-        <dex dex="/home/andrei/Desktop/branza/Proiect_MDS/superMApp/app/build/intermediates/pre-dexed/debug/internal_impl-22.1.1-c85e932112ba78fc5ea28c33a3642e401c51d7f8.jar" />
-    </item>
-    <item
-        jar="/home/andrei/Desktop/branza/Proiect_MDS/superMApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-nearby/7.3.0/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="5ea948d825957be6c4358c48422bee60eef2d487">
-        <dex dex="/home/andrei/Desktop/branza/Proiect_MDS/superMApp/app/build/intermediates/pre-dexed/debug/classes-f11aacd5736f15a36490b1768add48203b46de03.jar" />
-    </item>
-    <item
-        jar="/home/andrei/Desktop/branza/Proiect_MDS/superMApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-plus/7.3.0/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="59652857a825fff0de62166fca1bc9553cc01abb">
-        <dex dex="/home/andrei/Desktop/branza/Proiect_MDS/superMApp/app/build/intermediates/pre-dexed/debug/classes-87e0def410afbb207944022475ab2bf5dc322c7a.jar" />
-    </item>
-    <item
-        jar="/home/andrei/Desktop/branza/Proiect_MDS/superMApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-safetynet/7.3.0/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="0708ef60917bf94913fe9ef972a655b99462dca7">
-        <dex dex="/home/andrei/Desktop/branza/Proiect_MDS/superMApp/app/build/intermediates/pre-dexed/debug/classes-e7c19eff147cc4c618736496f1a9c9188d10447e.jar" />
-    </item>
-    <item
-        jar="/home/andrei/Desktop/branza/Proiect_MDS/superMApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appstate/7.3.0/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="0180d031a7b54dabb93b4af3869468b55dc938bd">
-        <dex dex="/home/andrei/Desktop/branza/Proiect_MDS/superMApp/app/build/intermediates/pre-dexed/debug/classes-66c638e51058f4f9c314a4c393b8a2a9df60172a.jar" />
-    </item>
-    <item
-        jar="/home/andrei/Desktop/branza/Proiect_MDS/superMApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-fitness/7.3.0/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="4f4fe3c23776540625f3c2844152a7510fddf9f1">
-        <dex dex="/home/andrei/Desktop/branza/Proiect_MDS/superMApp/app/build/intermediates/pre-dexed/debug/classes-54b46df3f5d9f3a848642f7e458a053402ec4969.jar" />
-    </item>
-    <item
-        jar="/home/andrei/Desktop/branza/Proiect_MDS/superMApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.3.0/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="f2f7ec211ce4d244ee97a57523eeb4526dc3cf8a">
-        <dex dex="/home/andrei/Desktop/branza/Proiect_MDS/superMApp/app/build/intermediates/pre-dexed/debug/classes-553206eb22c441d35f13181886e00f8161e7b9fe.jar" />
-    </item>
-    <item
-        jar="/home/andrei/Desktop/branza/Proiect_MDS/superMApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-drive/7.3.0/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="a0ce76dfaccbfbd6c551ed2174280aaabe60fe47">
-        <dex dex="/home/andrei/Desktop/branza/Proiect_MDS/superMApp/app/build/intermediates/pre-dexed/debug/classes-1cf96a2cdaa148cf84c140094676e30fdaa5edb7.jar" />
-    </item>
-    <item
-        jar="/home/andrei/Desktop/branza/Proiect_MDS/superMApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appinvite/7.3.0/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="bb36004beb02b69562cbec9aa7d6a3cf16bf5d1b">
-        <dex dex="/home/andrei/Desktop/branza/Proiect_MDS/superMApp/app/build/intermediates/pre-dexed/debug/classes-6d6f4633b650242a5133a3ba4afd34c84e186b49.jar" />
-    </item>
-    <item
-        jar="/home/andrei/Desktop/branza/Proiect_MDS/superMApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-gcm/7.3.0/classes.jar"
+        jar="C:\Users\Mara\Github\Proiect_MDS\superMApp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-gcm\7.3.0\classes.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="7215ac1f2fca947b9415a6ee2a1bf991364aab24">
-        <dex dex="/home/andrei/Desktop/branza/Proiect_MDS/superMApp/app/build/intermediates/pre-dexed/debug/classes-d2a84b8bcbb97285753f6c74f479e9f43990959e.jar" />
+        <dex dex="C:\Users\Mara\Github\Proiect_MDS\superMApp\app\build\intermediates\pre-dexed\debug\classes-b3a40ffa64c52c26b061c3fe9dda1327790aa20f.jar" />
     </item>
     <item
-        jar="/home/andrei/Desktop/branza/Proiect_MDS/superMApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/7.3.0/classes.jar"
+        jar="C:\Users\Mara\Github\Proiect_MDS\superMApp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-fitness\7.3.0\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="4f4fe3c23776540625f3c2844152a7510fddf9f1">
+        <dex dex="C:\Users\Mara\Github\Proiect_MDS\superMApp\app\build\intermediates\pre-dexed\debug\classes-f3cf41af5c0acb53729447d778026a0821461ed6.jar" />
+    </item>
+    <item
+        jar="C:\Users\Mara\Github\Proiect_MDS\superMApp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wearable\7.3.0\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="e5bf453b070c1e39297986144960e45afa0fdfad">
+        <dex dex="C:\Users\Mara\Github\Proiect_MDS\superMApp\app\build\intermediates\pre-dexed\debug\classes-a94e94eeeade0f2b154a29f69552b2f9cd7649a5.jar" />
+    </item>
+    <item
+        jar="C:\Users\Mara\Github\Proiect_MDS\superMApp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\7.3.0\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="e35fae1b377c23aa5fd2d309a190c2d0f73d54ec">
+        <dex dex="C:\Users\Mara\Github\Proiect_MDS\superMApp\app\build\intermediates\pre-dexed\debug\classes-efec82d23c1b9f9cedd0f11463e330064d91f922.jar" />
+    </item>
+    <item
+        jar="C:\Users\Mara\Github\Proiect_MDS\superMApp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-location\7.3.0\classes.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="b2c07cdb814fe988ad05f7b4d767a841514a5991">
-        <dex dex="/home/andrei/Desktop/branza/Proiect_MDS/superMApp/app/build/intermediates/pre-dexed/debug/classes-7eb175bd17dd5aca082c7167e7893cf74089ff82.jar" />
+        <dex dex="C:\Users\Mara\Github\Proiect_MDS\superMApp\app\build\intermediates\pre-dexed\debug\classes-b1d8792d627b46efb857c877189271812afd46cf.jar" />
     </item>
     <item
-        jar="/home/andrei/Desktop/branza/Proiect_MDS/superMApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/7.3.0/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="fe3e0c6de7cceed888b277487238b6af9a1cc299">
-        <dex dex="/home/andrei/Desktop/branza/Proiect_MDS/superMApp/app/build/intermediates/pre-dexed/debug/classes-49b2b075000f7c449ca987ee672035cfc725194c.jar" />
-    </item>
-    <item
-        jar="/home/andrei/Desktop/branza/Proiect_MDS/superMApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-identity/7.3.0/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="b48d5c51a9a9e329005106b4667f54948de4d4d8">
-        <dex dex="/home/andrei/Desktop/branza/Proiect_MDS/superMApp/app/build/intermediates/pre-dexed/debug/classes-d42eba8d300d63bc55573b83b6ed184005ef809a.jar" />
-    </item>
-    <item
-        jar="/home/andrei/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/22.1.1/support-annotations-22.1.1.jar"
+        jar="D:\Users\Mara\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\22.1.1\support-annotations-22.1.1.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="01d051a6bfb1218b1db2d3a5af0480ac2c25c42a">
-        <dex dex="/home/andrei/Desktop/branza/Proiect_MDS/superMApp/app/build/intermediates/pre-dexed/debug/support-annotations-22.1.1-09f33dba79563a3b441a27d9a980d03ef529b4f6.jar" />
+        <dex dex="C:\Users\Mara\Github\Proiect_MDS\superMApp\app\build\intermediates\pre-dexed\debug\support-annotations-22.1.1-525b45df2505ee375d73984ebbe7d90cfddf84b7.jar" />
+    </item>
+    <item
+        jar="C:\Users\Mara\Github\Proiect_MDS\superMApp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-analytics\7.3.0\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="9c9dea9e85aceb09d95df5e6f7bc8a43fc286068">
+        <dex dex="C:\Users\Mara\Github\Proiect_MDS\superMApp\app\build\intermediates\pre-dexed\debug\classes-910dc4c56c73dec22801860264b2cf014e5e341c.jar" />
+    </item>
+    <item
+        jar="C:\Users\Mara\Github\Proiect_MDS\superMApp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-plus\7.3.0\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="59652857a825fff0de62166fca1bc9553cc01abb">
+        <dex dex="C:\Users\Mara\Github\Proiect_MDS\superMApp\app\build\intermediates\pre-dexed\debug\classes-adc5991fd4ed9160116cc883c2163b711395dfc8.jar" />
+    </item>
+    <item
+        jar="C:\Users\Mara\Github\Proiect_MDS\superMApp\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.1.1\libs\internal_impl-22.1.1.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="9e070ad32b2700b0343e8e0cccc437733d91ba3a">
+        <dex dex="C:\Users\Mara\Github\Proiect_MDS\superMApp\app\build\intermediates\pre-dexed\debug\internal_impl-22.1.1-5e6ef95399593dfad18847d782f42d524a9bc8e3.jar" />
+    </item>
+    <item
+        jar="C:\Users\Mara\Github\Proiect_MDS\superMApp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\7.3.0\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="f2f7ec211ce4d244ee97a57523eeb4526dc3cf8a">
+        <dex dex="C:\Users\Mara\Github\Proiect_MDS\superMApp\app\build\intermediates\pre-dexed\debug\classes-94aa7e778ffeaa5ea61f6d0f036c45b6e6182676.jar" />
+    </item>
+    <item
+        jar="C:\Users\Mara\Github\Proiect_MDS\superMApp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-cast\7.3.0\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="e5b9f5b0aa8dee788beb63d23832cb29ce771343">
+        <dex dex="C:\Users\Mara\Github\Proiect_MDS\superMApp\app\build\intermediates\pre-dexed\debug\classes-0a6b1afe0b46d85277aeb150710328a55beda435.jar" />
+    </item>
+    <item
+        jar="C:\Users\Mara\Github\Proiect_MDS\superMApp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-drive\7.3.0\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="a0ce76dfaccbfbd6c551ed2174280aaabe60fe47">
+        <dex dex="C:\Users\Mara\Github\Proiect_MDS\superMApp\app\build\intermediates\pre-dexed\debug\classes-0707b30771ed9b990244b8bfd28eeec50c780bbe.jar" />
+    </item>
+    <item
+        jar="C:\Users\Mara\Github\Proiect_MDS\superMApp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads\7.3.0\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="3988694bf9d8186ff97ad5cdfa4ed88b5010fe08">
+        <dex dex="C:\Users\Mara\Github\Proiect_MDS\superMApp\app\build\intermediates\pre-dexed\debug\classes-85b04ae423b5e304e6b6ab9adeff2d9264b9055d.jar" />
+    </item>
+    <item
+        jar="C:\Users\Mara\Github\Proiect_MDS\superMApp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\7.3.0\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="fe3e0c6de7cceed888b277487238b6af9a1cc299">
+        <dex dex="C:\Users\Mara\Github\Proiect_MDS\superMApp\app\build\intermediates\pre-dexed\debug\classes-02fa954d9c40cee5b841794ce54cfbd3719551d4.jar" />
+    </item>
+    <item
+        jar="C:\Users\Mara\Github\Proiect_MDS\superMApp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-safetynet\7.3.0\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="0708ef60917bf94913fe9ef972a655b99462dca7">
+        <dex dex="C:\Users\Mara\Github\Proiect_MDS\superMApp\app\build\intermediates\pre-dexed\debug\classes-16128fa50c1f30a4e4d208ca8a07d451fb40473d.jar" />
+    </item>
+    <item
+        jar="C:\Users\Mara\Github\Proiect_MDS\superMApp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appstate\7.3.0\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="0180d031a7b54dabb93b4af3869468b55dc938bd">
+        <dex dex="C:\Users\Mara\Github\Proiect_MDS\superMApp\app\build\intermediates\pre-dexed\debug\classes-645adc28896254e21bc74f88448bae01925d2988.jar" />
+    </item>
+    <item
+        jar="C:\Users\Mara\Github\Proiect_MDS\superMApp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appinvite\7.3.0\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="bb36004beb02b69562cbec9aa7d6a3cf16bf5d1b">
+        <dex dex="C:\Users\Mara\Github\Proiect_MDS\superMApp\app\build\intermediates\pre-dexed\debug\classes-2266ff6ecb1c5186e1ab251e3d75e2238a9c878c.jar" />
+    </item>
+    <item
+        jar="C:\Users\Mara\Github\Proiect_MDS\superMApp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-nearby\7.3.0\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="5ea948d825957be6c4358c48422bee60eef2d487">
+        <dex dex="C:\Users\Mara\Github\Proiect_MDS\superMApp\app\build\intermediates\pre-dexed\debug\classes-8e7f689e1b44e28f5b5d23332399c0f05fbb0d50.jar" />
+    </item>
+    <item
+        jar="C:\Users\Mara\Github\Proiect_MDS\superMApp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-identity\7.3.0\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="b48d5c51a9a9e329005106b4667f54948de4d4d8">
+        <dex dex="C:\Users\Mara\Github\Proiect_MDS\superMApp\app\build\intermediates\pre-dexed\debug\classes-fbd439d86dc6a8bcc1477a35d5ec93d96df6f34f.jar" />
+    </item>
+    <item
+        jar="C:\Users\Mara\Github\Proiect_MDS\superMApp\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.1.1\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="a3ff3c506644c820eb2bdf06e8339f72be578551">
+        <dex dex="C:\Users\Mara\Github\Proiect_MDS\superMApp\app\build\intermediates\pre-dexed\debug\classes-c525ad591a035d28cf6cf062a352589f8a765876.jar" />
+    </item>
+    <item
+        jar="C:\Users\Mara\Github\Proiect_MDS\superMApp\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.1.1\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="c95ba8152923e4872e86a82cfcba9a51c0214328">
+        <dex dex="C:\Users\Mara\Github\Proiect_MDS\superMApp\app\build\intermediates\pre-dexed\debug\classes-d428a8899676baf611c22ae124301595bd199c77.jar" />
+    </item>
+    <item
+        jar="C:\Users\Mara\Github\Proiect_MDS\superMApp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wallet\7.3.0\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="6046e5cdaf799120b7c56a5a061d80e8854c4d34">
+        <dex dex="C:\Users\Mara\Github\Proiect_MDS\superMApp\app\build\intermediates\pre-dexed\debug\classes-90b8b87d472629b5b8fae81352044173d5f0bf68.jar" />
+    </item>
+    <item
+        jar="C:\Users\Mara\Github\Proiect_MDS\superMApp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-games\7.3.0\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="3b4ff5c39dace8f3b4ab4cab8191785547a0815f">
+        <dex dex="C:\Users\Mara\Github\Proiect_MDS\superMApp\app\build\intermediates\pre-dexed\debug\classes-a199ae791b36fcc5734dae8e7621374f094dbe9e.jar" />
     </item>
 
 </items>
