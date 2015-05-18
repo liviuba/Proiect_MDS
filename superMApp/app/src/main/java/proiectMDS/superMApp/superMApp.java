@@ -3,8 +3,15 @@
  * just put an IntExtra for which list to store the result in
  * */
 
+/*FIXME
+ * file format:
+ * SUEPRVISOR ~ <supervisor name> ~ <supervisor_phone#>
+ * TRACKED ~ <tracked_name> ~ <tracked_phone#>
+ */
+
 package proiectMDS.superMApp;
 
+import android.content.Context;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -19,11 +26,16 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
+import java.io.FileOutputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 
 import java.util.ArrayList;
 
 public class superMApp extends Activity
 {
+		final String FILENAME = "nume.txt";
+		FileOutputStream fos = null;
 		final int PICK_CONTACT_REQUEST = 1;
 		final int AUTHENTICATE_REQUEST = 2;
 		final int ADD_TO_SUPERVISOR = 10;
@@ -42,6 +54,12 @@ public class superMApp extends Activity
 			super.onCreate(savedInstanceState);
 			setContentView(R.layout.activity_super_mapp);
 
+			try{
+				fos = openFileOutput( FILENAME, Context.MODE_PRIVATE);
+			}
+			catch(FileNotFoundException e){
+				//FIXME
+			}
 			Button addSupervisorButton = (Button) findViewById(R.id.add_supervisor);
 			addSupervisorButton.setOnClickListener(new View.OnClickListener() {
 				@Override
@@ -140,13 +158,20 @@ public class superMApp extends Activity
 						String newContact = new String();
 						newContact = data.getExtras().getString("CONTACT_NAME") + " ~ "+ data.getExtras().getString("CONTACT_PHONE_NUM");
 
-						switch(tempListSwitch){
-							case ADD_TO_SUPERVISOR:
-								supervisorList.add(newContact);
-								break;
-							case ADD_TO_TRACKED:
-								trackedList.add(newContact);
-								break;
+						try{
+							switch(tempListSwitch){
+								case ADD_TO_SUPERVISOR:
+									supervisorList.add(newContact);
+									fos.write( ("SUPERVISOR ~ " + newContact).getBytes());
+									break;
+								case ADD_TO_TRACKED:
+									trackedList.add(newContact);
+									fos.write(("TRACKED ~ " +  newContact).getBytes());
+									break;
+							}
+						}
+						catch(IOException e){
+							//FIXME
 						}
 						tempListSwitch = 0;
 					}

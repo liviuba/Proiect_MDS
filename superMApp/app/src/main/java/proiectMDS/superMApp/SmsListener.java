@@ -7,6 +7,10 @@ import android.os.Bundle;
 import android.telephony.SmsManager;
 import android.telephony.SmsMessage;
 import android.util.Log;
+import java.io.FileOutputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
 
 import com.google.android.gms.maps.model.LatLng;
 
@@ -26,6 +30,8 @@ public class SmsListener extends BroadcastReceiver {
 
     @Override
     public void onReceive(Context context, Intent intent) {
+			/***TEST **/
+			
         final SmsManager sms = SmsManager.getDefault();
         final Bundle bundle = intent.getExtras();
 
@@ -48,27 +54,41 @@ public class SmsListener extends BroadcastReceiver {
                 //someone who is in danger and send the coordinates to GoogleMaps
 
 
-                if (someoneInDanger() && notAJoke()) {
+								//FIXME: tests. Replace w/ previous when persistent storage gets done
+                //if (someoneInDanger() && notAJoke()) {
+								Log.e("ASDFTOMATO", "1");
+								if (true) {
+										Log.e("ASDFTOMATO", "2");
+
                     //Extract the coordinates and send them
                     // to the Maps Activity
+										/* FIXME:
                     String[] coordinates = message.split(",",2);
                     LatLng position = new LatLng(Double.parseDouble(coordinates[0]), Double.parseDouble(coordinates[1]));
                     Bundle arg = new Bundle();
+										*/
+										/*	FIXME:
                     arg.putParcelable("position", position);
                     Intent acIntent = new Intent(context,MapsActivity.class);
                     acIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_SINGLE_TOP);
                     acIntent.putExtra("bundle", arg);
 
                     context.startActivity(acIntent);
-
-
-
-
+*/
                     //Let the music play if it was never started
-                    if (!soundStarted) {
+//FIXME                    if (!soundStarted) {
+										Log.e("ASDFTOMATO", "3");
+
+										if( true ){
+												Log.e("ASDFTOMATO", "4");
+
                         Intent serv = new Intent(context, MusicService.class);
+												Log.e("ASDFTOMATO", "5");
                         context.startService(serv);
-                        soundStarted = true;
+												Log.e("ASDFTOMATO", "6");
+
+												soundStarted = true;
+												Log.e("ASDFTOMATO", "7");
                     }
                 }
             } // bundle is null
