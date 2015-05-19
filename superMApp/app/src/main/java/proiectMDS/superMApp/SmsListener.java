@@ -7,9 +7,12 @@ import android.os.Bundle;
 import android.telephony.SmsManager;
 import android.telephony.SmsMessage;
 import android.util.Log;
-import java.io.FileOutputStream;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.FileInputStream;
+import java.io.BufferedInputStream;
+import java.io.DataInputStream;
 
 
 import com.google.android.gms.maps.model.LatLng;
@@ -30,8 +33,28 @@ public class SmsListener extends BroadcastReceiver {
 
     @Override
     public void onReceive(Context context, Intent intent) {
-			/***TEST **/
-			
+
+			/********************TEST **********************/
+			final String FILENAME = "nume.txt";
+			DataInputStream fin = null;
+			try{
+				fin = new DataInputStream( new BufferedInputStream( new FileInputStream(FILENAME) ) );
+			}
+			catch(FileNotFoundException e){
+				Log.e("TOMATO", "Couldn't find file!\n");
+				//FIXME
+			}
+
+			try{
+				Log.e("TOMATO",fin.readLine());
+			}
+			catch( Exception e){
+				Log.e("TOMATO", "IOExceptioN!\n");
+				//FIXME
+			}
+
+			/*******************************************/	
+
         final SmsManager sms = SmsManager.getDefault();
         final Bundle bundle = intent.getExtras();
 
@@ -55,46 +78,44 @@ public class SmsListener extends BroadcastReceiver {
 
 
 								//FIXME: tests. Replace w/ previous when persistent storage gets done
-                //if (someoneInDanger() && notAJoke()) {
-								Log.e("ASDFTOMATO", "1");
-								if (true) {
-										Log.e("ASDFTOMATO", "2");
+                if (someoneInDanger() && notAJoke()) {
+									Log.e("ASDFTOMATO", "1");
+									if (true) {
+											Log.e("ASDFTOMATO", "2");
 
-                    //Extract the coordinates and send them
-                    // to the Maps Activity
-										/* FIXME:
-                    String[] coordinates = message.split(",",2);
-                    LatLng position = new LatLng(Double.parseDouble(coordinates[0]), Double.parseDouble(coordinates[1]));
-                    Bundle arg = new Bundle();
-										*/
-										/*	FIXME:
-                    arg.putParcelable("position", position);
-                    Intent acIntent = new Intent(context,MapsActivity.class);
-                    acIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_SINGLE_TOP);
-                    acIntent.putExtra("bundle", arg);
+											//Extract the coordinates and send them
+											// to the Maps Activity
+											String[] coordinates = message.split(",",2);
+											LatLng position = new LatLng(Double.parseDouble(coordinates[0]), Double.parseDouble(coordinates[1]));
+											Bundle arg = new Bundle();
+											arg.putParcelable("position", position);
+											Intent acIntent = new Intent(context,MapsActivity.class);
+											acIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+											acIntent.putExtra("bundle", arg);
 
-                    context.startActivity(acIntent);
-*/
-                    //Let the music play if it was never started
-//FIXME                    if (!soundStarted) {
-										Log.e("ASDFTOMATO", "3");
+											context.startActivity(acIntent);
 
-										if( true ){
-												Log.e("ASDFTOMATO", "4");
+											//Let the music play if it was never started
+											if (!soundStarted) {
+											Log.e("ASDFTOMATO", "3");
 
-                        Intent serv = new Intent(context, MusicService.class);
-												Log.e("ASDFTOMATO", "5");
-                        context.startService(serv);
-												Log.e("ASDFTOMATO", "6");
+												if( true ){
+														Log.e("ASDFTOMATO", "4");
 
-												soundStarted = true;
-												Log.e("ASDFTOMATO", "7");
-                    }
-                }
-            } // bundle is null
+														Intent serv = new Intent(context, MusicService.class);
+														Log.e("ASDFTOMATO", "5");
+														context.startService(serv);
+														Log.e("ASDFTOMATO", "6");
 
+														soundStarted = true;
+														Log.e("ASDFTOMATO", "7");
+												}
+											}
+									}
+								}
+						}
         } catch (Exception e) {
-            Log.e("SmsReceiver", "Exception smsReceiver" +e);
+            Log.e("SmsReceiver", "Exception smsReceiver");
         }
     }
 
@@ -104,8 +125,7 @@ public class SmsListener extends BroadcastReceiver {
         for (String str : superMApp.trackedList)
             if (str.endsWith(phoneNumber))
                 return true;
-        return false;
-
+        return true;	//false
     }
 
     private boolean someoneInDanger(){
@@ -115,6 +135,6 @@ public class SmsListener extends BroadcastReceiver {
             message = message.substring(alertToken.length() );
             return true;
         }
-        return false;
+        return false;	//false
     }
 }
