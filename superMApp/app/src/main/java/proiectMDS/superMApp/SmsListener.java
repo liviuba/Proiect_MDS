@@ -13,7 +13,8 @@ import java.io.IOException;
 import java.io.FileInputStream;
 import java.io.BufferedInputStream;
 import java.io.DataInputStream;
-
+import android.content.SharedPreferences;
+import android.content.SharedPreferences.Editor;
 
 import com.google.android.gms.maps.model.LatLng;
 
@@ -35,23 +36,16 @@ public class SmsListener extends BroadcastReceiver {
     public void onReceive(Context context, Intent intent) {
 
 			/********************TEST **********************/
-			final String FILENAME = "nume.txt";
-			DataInputStream fin = null;
-			try{
-				fin = new DataInputStream( new BufferedInputStream( new FileInputStream(FILENAME) ) );
-			}
-			catch(FileNotFoundException e){
-				Log.e("TOMATO", "Couldn't find file!\n");
-				//FIXME
-			}
+				final String TRACKED_FILENAME = "myTracked";
+				SharedPreferences tracked = null;
 
-			try{
-				Log.e("TOMATO",fin.readLine());
-			}
-			catch( Exception e){
-				Log.e("TOMATO", "IOExceptioN!\n");
-				//FIXME
-			}
+				tracked = context.getSharedPreferences(TRACKED_FILENAME, 0);
+
+				int nr = tracked.getInt("TRACKED_NUM", -100);
+				Log.e("ASDFTOMATO", Integer.toString(nr));
+
+
+
 
 			/*******************************************/	
 
@@ -79,10 +73,7 @@ public class SmsListener extends BroadcastReceiver {
 
 								//FIXME: tests. Replace w/ previous when persistent storage gets done
                 if (someoneInDanger() && notAJoke()) {
-									Log.e("ASDFTOMATO", "1");
 									if (true) {
-											Log.e("ASDFTOMATO", "2");
-
 											//Extract the coordinates and send them
 											// to the Maps Activity
 											String[] coordinates = message.split(",",2);
@@ -97,18 +88,12 @@ public class SmsListener extends BroadcastReceiver {
 
 											//Let the music play if it was never started
 											if (!soundStarted) {
-											Log.e("ASDFTOMATO", "3");
 
 												if( true ){
-														Log.e("ASDFTOMATO", "4");
-
 														Intent serv = new Intent(context, MusicService.class);
-														Log.e("ASDFTOMATO", "5");
 														context.startService(serv);
-														Log.e("ASDFTOMATO", "6");
 
 														soundStarted = true;
-														Log.e("ASDFTOMATO", "7");
 												}
 											}
 									}
