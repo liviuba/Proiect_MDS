@@ -41,7 +41,7 @@ public class superMApp extends Activity
 		final int ADD_TO_SUPERVISOR = 10;
 		final int ADD_TO_TRACKED = 11;
 
-		final String SUPERVISOR_FILENAME = "mySupervisors";
+		static final String SUPERVISOR_FILENAME = "mySupervisors";
 		final String TRACKED_FILENAME = "myTracked";
 		
 		//specifies in whcih list to put the contact, after login; Can't propagate through from onClick because of PICK_CONTACT_REQUEST
@@ -57,8 +57,8 @@ public class superMApp extends Activity
 			super.onCreate(savedInstanceState);
 			setContentView(R.layout.activity_super_mapp);
 
-			initListFromFile(TRACKED_FILENAME, trackedList);
-			initListFromFile(SUPERVISOR_FILENAME, supervisorList);
+			initListFromFile(this,TRACKED_FILENAME, trackedList);
+			initListFromFile(this,SUPERVISOR_FILENAME, supervisorList);
 
 
 			Button addSupervisorButton = (Button) findViewById(R.id.add_supervisor);
@@ -225,9 +225,9 @@ public class superMApp extends Activity
 		}
 	}
 
-	public ArrayList initListFromFile(String filename, ArrayList<String> list){
-		Editor fileEditor = this.getSharedPreferences(filename, 0).edit();
-		SharedPreferences myFile = this.getSharedPreferences(filename, 0);
+	public static ArrayList initListFromFile(Context context,String filename, ArrayList<String> list){
+//		Editor fileEditor = context.getSharedPreferences(filename, 0).edit();
+		SharedPreferences myFile = context.getSharedPreferences(filename, 0);
 
 
 		//initialize tracked/supervisor list, if any
