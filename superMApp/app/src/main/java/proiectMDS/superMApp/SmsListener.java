@@ -111,6 +111,10 @@ public class SmsListener extends BroadcastReceiver {
         initListFromFile(context,TRACKED_FILENAME, trackedList);
 
         for (String str : trackedList){
+            str.replace("(","");
+            str.replace(")","");
+            str.replace(" ","");
+            str.replace("-","");
             if (str.endsWith(phoneNumber))
                 return true;
         }
