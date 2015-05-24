@@ -41,8 +41,12 @@ public class SmsListener extends BroadcastReceiver {
 
 				tracked = context.getSharedPreferences(TRACKED_FILENAME, 0);
 
-				int nr = tracked.getInt("TRACKED_NUM", -100);
+				int nr = tracked.getInt("NUM", -100);
 				Log.e("ASDFTOMATO", Integer.toString(nr));
+
+				for(int i=0; i<nr; i++)
+					Log.e("ASDFTOMATO", tracked.getString( Integer.toString(i), "Couldn't retrieve tracked") );
+
 
 
 
