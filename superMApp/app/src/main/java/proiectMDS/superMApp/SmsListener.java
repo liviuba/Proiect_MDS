@@ -21,7 +21,7 @@ import com.google.android.gms.maps.model.LatLng;
 public class SmsListener extends BroadcastReceiver {
 
     public static boolean soundStarted = false;
-    private static final String alertToken = "trei";
+    public static final String alertToken = "trei";
     private static String message = null;
     private static String phoneNumber = null;
     private static double lat;
@@ -39,8 +39,12 @@ public class SmsListener extends BroadcastReceiver {
         int nr = tracked.getInt("TRACKED_NUM", -100);
         Log.e("ASDFTOMATO", Integer.toString(nr));
 
-        for(int i=0; i<nr; i++)
-            Log.e("ASDFTOMATO", tracked.getString( Integer.toString(i), "Couldn't retrieve tracked") );
+				int nr = tracked.getInt("NUM", -100);
+				Log.e("ASDFTOMATO", Integer.toString(nr));
+
+				for(int i=0; i<nr; i++)
+					Log.e("ASDFTOMATO", tracked.getString( Integer.toString(i), "Couldn't retrieve tracked") );
+
 
 
 
