@@ -2,172 +2,172 @@
 <items version="2" >
 
     <item
-        jar="/home/imv/Documents/Proiect_MDS/superMApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-nearby/7.3.0/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="5ea948d825957be6c4358c48422bee60eef2d487">
-        <dex dex="/home/imv/Documents/Proiect_MDS/superMApp/app/build/intermediates/pre-dexed/debug/classes-c6be80758bdf5b0c1ca409b15db58686438cfd54.jar" />
-    </item>
-    <item
-        jar="/home/imv/Documents/Proiect_MDS/superMApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-safetynet/7.3.0/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="0708ef60917bf94913fe9ef972a655b99462dca7">
-        <dex dex="/home/imv/Documents/Proiect_MDS/superMApp/app/build/intermediates/pre-dexed/debug/classes-c3068bf72e3ba36a13b65df1cb661c745f4a9a31.jar" />
-    </item>
-    <item
-        jar="/home/imv/Documents/Proiect_MDS/superMApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-panorama/7.3.0/classes.jar"
+        jar="/home/andrei/Desktop/MDS/Proiect_MDS/superMApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-panorama/7.3.0/classes.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="565a01f90f1529f73362707c4c185d0623a68782">
-        <dex dex="/home/imv/Documents/Proiect_MDS/superMApp/app/build/intermediates/pre-dexed/debug/classes-ee8800d91718dc92962d7e31b68fb4e9953ad743.jar" />
+        <dex dex="/home/andrei/Desktop/MDS/Proiect_MDS/superMApp/app/build/intermediates/pre-dexed/debug/classes-c8e56532bcda70c80ee3fa4bc949c050527e0834.jar" />
     </item>
     <item
-        jar="/home/imv/Documents/Proiect_MDS/superMApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-games/7.3.0/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="3b4ff5c39dace8f3b4ab4cab8191785547a0815f">
-        <dex dex="/home/imv/Documents/Proiect_MDS/superMApp/app/build/intermediates/pre-dexed/debug/classes-745d6c7b53d02eb41962f038dc9c133e92ff83a4.jar" />
-    </item>
-    <item
-        jar="/home/imv/Documents/Proiect_MDS/superMApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appstate/7.3.0/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="0180d031a7b54dabb93b4af3869468b55dc938bd">
-        <dex dex="/home/imv/Documents/Proiect_MDS/superMApp/app/build/intermediates/pre-dexed/debug/classes-1b0b52423011504aa274543618c90397f10de24c.jar" />
-    </item>
-    <item
-        jar="/home/imv/Documents/Proiect_MDS/superMApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-identity/7.3.0/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="b48d5c51a9a9e329005106b4667f54948de4d4d8">
-        <dex dex="/home/imv/Documents/Proiect_MDS/superMApp/app/build/intermediates/pre-dexed/debug/classes-b9e4ac9675b3704c9fbbd811159a98a25a608b58.jar" />
-    </item>
-    <item
-        jar="/home/imv/Documents/Proiect_MDS/superMApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/7.3.0/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="3988694bf9d8186ff97ad5cdfa4ed88b5010fe08">
-        <dex dex="/home/imv/Documents/Proiect_MDS/superMApp/app/build/intermediates/pre-dexed/debug/classes-d3ee0019403c6aeebd89211073379fb3bdf9216c.jar" />
-    </item>
-    <item
-        jar="/home/imv/Documents/Proiect_MDS/superMApp/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.1.1/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="c95ba8152923e4872e86a82cfcba9a51c0214328">
-        <dex dex="/home/imv/Documents/Proiect_MDS/superMApp/app/build/intermediates/pre-dexed/debug/classes-3416a8cdafab64890e30aee4feef4c37b21dc369.jar" />
-    </item>
-    <item
-        jar="/home/imv/Documents/Proiect_MDS/superMApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-fitness/7.3.0/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="4f4fe3c23776540625f3c2844152a7510fddf9f1">
-        <dex dex="/home/imv/Documents/Proiect_MDS/superMApp/app/build/intermediates/pre-dexed/debug/classes-18596e1c6a753460f5668bca811ad5446501c545.jar" />
-    </item>
-    <item
-        jar="/opt/android-sdk/extras/android/m2repository/com/android/support/support-annotations/22.1.1/support-annotations-22.1.1.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="01d051a6bfb1218b1db2d3a5af0480ac2c25c42a">
-        <dex dex="/home/imv/Documents/Proiect_MDS/superMApp/app/build/intermediates/pre-dexed/debug/support-annotations-22.1.1-f347ccabac23a48257adb2a91fb4537f17c8a110.jar" />
-    </item>
-    <item
-        jar="/home/imv/Documents/Proiect_MDS/superMApp/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.1.1/libs/internal_impl-22.1.1.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="9e070ad32b2700b0343e8e0cccc437733d91ba3a">
-        <dex dex="/home/imv/Documents/Proiect_MDS/superMApp/app/build/intermediates/pre-dexed/debug/internal_impl-22.1.1-5c2f01a1c75dead55124b4157947e6f3380d8d19.jar" />
-    </item>
-    <item
-        jar="/home/imv/Documents/Proiect_MDS/superMApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appindexing/7.3.0/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="e35fae1b377c23aa5fd2d309a190c2d0f73d54ec">
-        <dex dex="/home/imv/Documents/Proiect_MDS/superMApp/app/build/intermediates/pre-dexed/debug/classes-af9a109c00af29d49e497b1fd96949e19ed03d68.jar" />
-    </item>
-    <item
-        jar="/home/imv/Documents/Proiect_MDS/superMApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-gcm/7.3.0/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="7215ac1f2fca947b9415a6ee2a1bf991364aab24">
-        <dex dex="/home/imv/Documents/Proiect_MDS/superMApp/app/build/intermediates/pre-dexed/debug/classes-cdb9a4a3c889e6b2e2842b04f6affbb4f4ecf919.jar" />
-    </item>
-    <item
-        jar="/home/imv/Documents/Proiect_MDS/superMApp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.1.1/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="a3ff3c506644c820eb2bdf06e8339f72be578551">
-        <dex dex="/home/imv/Documents/Proiect_MDS/superMApp/app/build/intermediates/pre-dexed/debug/classes-4d8fedf317a0f04419866e7a943e162b1e823b55.jar" />
-    </item>
-    <item
-        jar="/home/imv/Documents/Proiect_MDS/superMApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wearable/7.3.0/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="e5bf453b070c1e39297986144960e45afa0fdfad">
-        <dex dex="/home/imv/Documents/Proiect_MDS/superMApp/app/build/intermediates/pre-dexed/debug/classes-50be413b61f20452de62e87346258211b2f92e28.jar" />
-    </item>
-    <item
-        jar="/home/imv/Documents/Proiect_MDS/superMApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/7.3.0/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="6046e5cdaf799120b7c56a5a061d80e8854c4d34">
-        <dex dex="/home/imv/Documents/Proiect_MDS/superMApp/app/build/intermediates/pre-dexed/debug/classes-b3de9e3a1bbe6bc0e13c5eefac8ffd4bd15926f0.jar" />
-    </item>
-    <item
-        jar="/home/imv/Documents/Proiect_MDS/superMApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appinvite/7.3.0/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="bb36004beb02b69562cbec9aa7d6a3cf16bf5d1b">
-        <dex dex="/home/imv/Documents/Proiect_MDS/superMApp/app/build/intermediates/pre-dexed/debug/classes-a840ea729db9e16f191f0be16cac8739677beb6e.jar" />
-    </item>
-    <item
-        jar="/home/imv/Documents/Proiect_MDS/superMApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast/7.3.0/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="e5b9f5b0aa8dee788beb63d23832cb29ce771343">
-        <dex dex="/home/imv/Documents/Proiect_MDS/superMApp/app/build/intermediates/pre-dexed/debug/classes-b032e1e7e8550891b13fa09317871e36371dc5e5.jar" />
-    </item>
-    <item
-        jar="/home/imv/Documents/Proiect_MDS/superMApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-plus/7.3.0/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="59652857a825fff0de62166fca1bc9553cc01abb">
-        <dex dex="/home/imv/Documents/Proiect_MDS/superMApp/app/build/intermediates/pre-dexed/debug/classes-33bd1136e93bc523587e84987de7ef0806664ecc.jar" />
-    </item>
-    <item
-        jar="/home/imv/Documents/Proiect_MDS/superMApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.3.0/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="f2f7ec211ce4d244ee97a57523eeb4526dc3cf8a">
-        <dex dex="/home/imv/Documents/Proiect_MDS/superMApp/app/build/intermediates/pre-dexed/debug/classes-9865761a87391db2ca3f0d83e87be5910c605522.jar" />
-    </item>
-    <item
-        jar="/home/imv/Documents/Proiect_MDS/superMApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/7.3.0/classes.jar"
+        jar="/home/andrei/Desktop/MDS/Proiect_MDS/superMApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/7.3.0/classes.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="fe3e0c6de7cceed888b277487238b6af9a1cc299">
-        <dex dex="/home/imv/Documents/Proiect_MDS/superMApp/app/build/intermediates/pre-dexed/debug/classes-022e8fb2081ae2b88b69c968bcb6356ae0c64e81.jar" />
+        <dex dex="/home/andrei/Desktop/MDS/Proiect_MDS/superMApp/app/build/intermediates/pre-dexed/debug/classes-1d07016f8269a0dc5c09584df8701f69306f86c1.jar" />
     </item>
     <item
-        jar="/home/imv/Documents/Proiect_MDS/superMApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics/7.3.0/classes.jar"
+        jar="/home/andrei/Desktop/MDS/Proiect_MDS/superMApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-nearby/7.3.0/classes.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="9c9dea9e85aceb09d95df5e6f7bc8a43fc286068">
-        <dex dex="/home/imv/Documents/Proiect_MDS/superMApp/app/build/intermediates/pre-dexed/debug/classes-cb3b0a60f66543ed65c03b986112beb40bc9bb58.jar" />
+        sha1="5ea948d825957be6c4358c48422bee60eef2d487">
+        <dex dex="/home/andrei/Desktop/MDS/Proiect_MDS/superMApp/app/build/intermediates/pre-dexed/debug/classes-c2c99703a2e16fa48412a37731c1608de553176b.jar" />
     </item>
     <item
-        jar="/home/imv/Documents/Proiect_MDS/superMApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-drive/7.3.0/classes.jar"
+        jar="/home/andrei/Desktop/MDS/Proiect_MDS/superMApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-plus/7.3.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="59652857a825fff0de62166fca1bc9553cc01abb">
+        <dex dex="/home/andrei/Desktop/MDS/Proiect_MDS/superMApp/app/build/intermediates/pre-dexed/debug/classes-21d247ec2917f336dc6e504f7a8809a0c40c46f3.jar" />
+    </item>
+    <item
+        jar="/home/andrei/Desktop/MDS/Proiect_MDS/superMApp/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.1.1/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="c95ba8152923e4872e86a82cfcba9a51c0214328">
+        <dex dex="/home/andrei/Desktop/MDS/Proiect_MDS/superMApp/app/build/intermediates/pre-dexed/debug/classes-43bf6792bcb9930837f4d79f4cd798a0a631b446.jar" />
+    </item>
+    <item
+        jar="/home/andrei/Desktop/MDS/Proiect_MDS/superMApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-fitness/7.3.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="4f4fe3c23776540625f3c2844152a7510fddf9f1">
+        <dex dex="/home/andrei/Desktop/MDS/Proiect_MDS/superMApp/app/build/intermediates/pre-dexed/debug/classes-4646838ed66bd73ac46ce5486715b27178860382.jar" />
+    </item>
+    <item
+        jar="/home/andrei/Desktop/MDS/Proiect_MDS/superMApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appindexing/7.3.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="e35fae1b377c23aa5fd2d309a190c2d0f73d54ec">
+        <dex dex="/home/andrei/Desktop/MDS/Proiect_MDS/superMApp/app/build/intermediates/pre-dexed/debug/classes-c0952ad491a606967404c2e7db4a924c5c3e7f1f.jar" />
+    </item>
+    <item
+        jar="/home/andrei/Desktop/MDS/Proiect_MDS/superMApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast/7.3.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="e5b9f5b0aa8dee788beb63d23832cb29ce771343">
+        <dex dex="/home/andrei/Desktop/MDS/Proiect_MDS/superMApp/app/build/intermediates/pre-dexed/debug/classes-d0d7c8f4db7133df4786c8eaa14018851df0f5ba.jar" />
+    </item>
+    <item
+        jar="/home/andrei/Desktop/MDS/Proiect_MDS/superMApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-drive/7.3.0/classes.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="a0ce76dfaccbfbd6c551ed2174280aaabe60fe47">
-        <dex dex="/home/imv/Documents/Proiect_MDS/superMApp/app/build/intermediates/pre-dexed/debug/classes-fe9daaaad843bc22294ae07f6bc323be787c2af9.jar" />
+        <dex dex="/home/andrei/Desktop/MDS/Proiect_MDS/superMApp/app/build/intermediates/pre-dexed/debug/classes-21395454a30efb778a779814ac271c09b8a86b8a.jar" />
     </item>
     <item
-        jar="/home/imv/Documents/Proiect_MDS/superMApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/7.3.0/classes.jar"
+        jar="/home/andrei/Desktop/MDS/Proiect_MDS/superMApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/7.3.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="3988694bf9d8186ff97ad5cdfa4ed88b5010fe08">
+        <dex dex="/home/andrei/Desktop/MDS/Proiect_MDS/superMApp/app/build/intermediates/pre-dexed/debug/classes-4bbc7f2d9bc63ec876a589dc7f4de1bce7680c8d.jar" />
+    </item>
+    <item
+        jar="/home/andrei/Desktop/MDS/Proiect_MDS/superMApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wearable/7.3.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="e5bf453b070c1e39297986144960e45afa0fdfad">
+        <dex dex="/home/andrei/Desktop/MDS/Proiect_MDS/superMApp/app/build/intermediates/pre-dexed/debug/classes-3432b9b091609a10569c387c9e880e95ca0efb79.jar" />
+    </item>
+    <item
+        jar="/home/andrei/Desktop/MDS/Proiect_MDS/superMApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/7.3.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="6046e5cdaf799120b7c56a5a061d80e8854c4d34">
+        <dex dex="/home/andrei/Desktop/MDS/Proiect_MDS/superMApp/app/build/intermediates/pre-dexed/debug/classes-25f683d36210776a086b9d65979a79254b27b1c6.jar" />
+    </item>
+    <item
+        jar="/home/andrei/Desktop/MDS/Proiect_MDS/superMApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.3.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="f2f7ec211ce4d244ee97a57523eeb4526dc3cf8a">
+        <dex dex="/home/andrei/Desktop/MDS/Proiect_MDS/superMApp/app/build/intermediates/pre-dexed/debug/classes-25fd7e3f8834a8ac5ab98bccde5367ad3d2d8d2d.jar" />
+    </item>
+    <item
+        jar="/home/andrei/Desktop/MDS/Proiect_MDS/superMApp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.1.1/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="a3ff3c506644c820eb2bdf06e8339f72be578551">
+        <dex dex="/home/andrei/Desktop/MDS/Proiect_MDS/superMApp/app/build/intermediates/pre-dexed/debug/classes-9ebaaef4bd0992e04d71be52147b32ac00b7a3b0.jar" />
+    </item>
+    <item
+        jar="/home/andrei/Desktop/MDS/Proiect_MDS/superMApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-games/7.3.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="3b4ff5c39dace8f3b4ab4cab8191785547a0815f">
+        <dex dex="/home/andrei/Desktop/MDS/Proiect_MDS/superMApp/app/build/intermediates/pre-dexed/debug/classes-3a5ab593a9b2ca1edec0bf4a43bc28e5ecaa2262.jar" />
+    </item>
+    <item
+        jar="/home/andrei/Desktop/MDS/Proiect_MDS/superMApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-gcm/7.3.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="7215ac1f2fca947b9415a6ee2a1bf991364aab24">
+        <dex dex="/home/andrei/Desktop/MDS/Proiect_MDS/superMApp/app/build/intermediates/pre-dexed/debug/classes-dfc811c01db208bab499dc42d82320b4b0ee92b6.jar" />
+    </item>
+    <item
+        jar="/home/andrei/Desktop/MDS/Proiect_MDS/superMApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appinvite/7.3.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="bb36004beb02b69562cbec9aa7d6a3cf16bf5d1b">
+        <dex dex="/home/andrei/Desktop/MDS/Proiect_MDS/superMApp/app/build/intermediates/pre-dexed/debug/classes-3edaf84bfc9ac9ebe46a1278f8b24fc3695a9820.jar" />
+    </item>
+    <item
+        jar="/home/andrei/Desktop/MDS/Proiect_MDS/superMApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-identity/7.3.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="b48d5c51a9a9e329005106b4667f54948de4d4d8">
+        <dex dex="/home/andrei/Desktop/MDS/Proiect_MDS/superMApp/app/build/intermediates/pre-dexed/debug/classes-4b66bdd8f178b55e4934e3d918b0958d783b4f96.jar" />
+    </item>
+    <item
+        jar="/home/andrei/Desktop/MDS/Proiect_MDS/superMApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appstate/7.3.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="0180d031a7b54dabb93b4af3869468b55dc938bd">
+        <dex dex="/home/andrei/Desktop/MDS/Proiect_MDS/superMApp/app/build/intermediates/pre-dexed/debug/classes-d092296596e70f11d1d1ed8bfe8aa2bc7cd2b2ff.jar" />
+    </item>
+    <item
+        jar="/home/andrei/Desktop/MDS/Proiect_MDS/superMApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics/7.3.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="9c9dea9e85aceb09d95df5e6f7bc8a43fc286068">
+        <dex dex="/home/andrei/Desktop/MDS/Proiect_MDS/superMApp/app/build/intermediates/pre-dexed/debug/classes-e56bd72d3d96908e4c94de94d6ff000e6aa8448b.jar" />
+    </item>
+    <item
+        jar="/home/andrei/Desktop/MDS/Proiect_MDS/superMApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/7.3.0/classes.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="b2c07cdb814fe988ad05f7b4d767a841514a5991">
-        <dex dex="/home/imv/Documents/Proiect_MDS/superMApp/app/build/intermediates/pre-dexed/debug/classes-25db5b8b61e69856e672e9069474d734dc46faa6.jar" />
+        <dex dex="/home/andrei/Desktop/MDS/Proiect_MDS/superMApp/app/build/intermediates/pre-dexed/debug/classes-f4f9df2d0afb114b2f249a34e1b731ba2c25975b.jar" />
+    </item>
+    <item
+        jar="/home/andrei/Desktop/MDS/Proiect_MDS/superMApp/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.1.1/libs/internal_impl-22.1.1.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="9e070ad32b2700b0343e8e0cccc437733d91ba3a">
+        <dex dex="/home/andrei/Desktop/MDS/Proiect_MDS/superMApp/app/build/intermediates/pre-dexed/debug/internal_impl-22.1.1-0a90a4861c054d3171e504b2cb8a36bbbc2562cf.jar" />
+    </item>
+    <item
+        jar="/home/andrei/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/22.1.1/support-annotations-22.1.1.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="01d051a6bfb1218b1db2d3a5af0480ac2c25c42a">
+        <dex dex="/home/andrei/Desktop/MDS/Proiect_MDS/superMApp/app/build/intermediates/pre-dexed/debug/support-annotations-22.1.1-09f33dba79563a3b441a27d9a980d03ef529b4f6.jar" />
+    </item>
+    <item
+        jar="/home/andrei/Desktop/MDS/Proiect_MDS/superMApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-safetynet/7.3.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="0708ef60917bf94913fe9ef972a655b99462dca7">
+        <dex dex="/home/andrei/Desktop/MDS/Proiect_MDS/superMApp/app/build/intermediates/pre-dexed/debug/classes-92f21b883ce62921ab75af44f75226334651f6f6.jar" />
     </item>
 
 </items>
