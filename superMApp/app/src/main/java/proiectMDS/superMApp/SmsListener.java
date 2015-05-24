@@ -11,6 +11,8 @@ import android.util.Log;
 
 import com.google.android.gms.maps.model.LatLng;
 
+import java.util.ArrayList;
+
 /**
  * Created by andrei on 03.05.2015.
  */
@@ -26,6 +28,8 @@ public class SmsListener extends BroadcastReceiver {
     private static String phoneNumber = null;
     private static double lat;
     private static double lon;
+    final String TRACKED_FILENAME = "myTracked";
+    public static ArrayList<String> trackedList = new ArrayList<String>();
 
     @Override
     public void onReceive(Context context, Intent intent) {
@@ -39,8 +43,7 @@ public class SmsListener extends BroadcastReceiver {
         int nr = tracked.getInt("TRACKED_NUM", -100);
         Log.e("ASDFTOMATO", Integer.toString(nr));
 
-				int nr = tracked.getInt("NUM", -100);
-				Log.e("ASDFTOMATO", Integer.toString(nr));
+
 
 				for(int i=0; i<nr; i++)
 					Log.e("ASDFTOMATO", tracked.getString( Integer.toString(i), "Couldn't retrieve tracked") );
@@ -73,7 +76,7 @@ public class SmsListener extends BroadcastReceiver {
                 //someone who is in danger and send the coordinates to GoogleMaps
 
                 //FIXME: tests. Replace w/ previous when persistent storage gets done
-                if (someoneInDanger() && notAJoke()) {
+                if (someoneInDanger() && notAJoke(context)) {
 									if (true) {
 											//Extract the coordinates and send them
 											// to the Maps Activity
@@ -104,17 +107,15 @@ public class SmsListener extends BroadcastReceiver {
         }
     }
 
-    private boolean notAJoke(){
-        //search for the originating phone number
-        // in the tracked list
-//        for (String str : superMApp.trackedList)
-//            if (str.endsWith(phoneNumber))
-//                return true;
+    private boolean notAJoke(Context context){
+        initListFromFile(context,TRACKED_FILENAME, trackedList);
 
+        for (String str : trackedList){
+            if (str.endsWith(phoneNumber))
+                return true;
+        }
 
-
-
-        return true;	//false
+        return false;	//false
     }
     
 
@@ -125,7 +126,7 @@ public class SmsListener extends BroadcastReceiver {
         String[] parts = message.split(",");
         for (String str : parts)
             Log.i("someoneInDanger():", str);
-        if (parts.length <= 4)
+        if (parts.length < 4)
             return false;
 
         if (!parts[0].equals(alertToken))
@@ -145,5 +146,18 @@ public class SmsListener extends BroadcastReceiver {
 
         return true;
 
+    }
+
+    public static ArrayList initListFromFile(Context context,String filename, ArrayList<String> list){
+        SharedPreferences myFile = context.getSharedPreferences(filename, 0);
+
+
+        //initialize tracked/supervisor list, if any
+        int num = myFile.getInt("NUM", -100);
+        if(num != -100)// -100 is the default value, in case no such key is found
+            for(int i=0; i<num; i++)
+                list.add( myFile.getString( Integer.toString(i), "Couldn't retrieve data from file : "+filename ) );
+
+        return list;
     }
 }
