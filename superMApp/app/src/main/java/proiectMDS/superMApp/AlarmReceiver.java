@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 
+import java.util.ArrayList;
+
 public class AlarmReceiver extends BroadcastReceiver {
 
     public static final String SOME_ACTION = "proiectMDS.superMApp.ACTION";
@@ -16,6 +18,13 @@ public class AlarmReceiver extends BroadcastReceiver {
            // intent.getStringArrayExtra("contacts");
 //                intent.putExtra("number", "lat");
 //            intent.putExtra("lng", "lng");
+//            ArrayList<String> array = intent.getStringArrayListExtra("contactsArray");
+//            String contacts = "";
+//            for(String s: array){
+//                contacts+=s+";";
+//            }
+//            Log.i("AlarmReceiver",contacts);
+//            localIntent.putExtra("contactsArray",contacts);
             context.startService(localIntent);
 
         }

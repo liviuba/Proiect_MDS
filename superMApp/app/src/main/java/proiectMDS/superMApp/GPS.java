@@ -89,7 +89,7 @@ public class GPS extends Activity {
                 catch(Exception e){e.printStackTrace();}
 //                stopService(new Intent(GPS.this,SmsStreamService.class));
                 Toast.makeText(GPS.this,"Stopped service",Toast.LENGTH_SHORT).show();
-                gpsCoordinates.setText("\nService stopped");
+                gpsCoordinates.setText("Service stopped");
             }
         });
 
@@ -101,6 +101,7 @@ public class GPS extends Activity {
         AlarmManager am = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
         Intent i = new Intent(context, AlarmReceiver.class);
         i.setAction("proiectMDS.superMApp.ACTION");
+//        i.putStringArrayListExtra("contactsArray",contactsArray);
         PendingIntent pi = PendingIntent.getBroadcast(context,0, i, PendingIntent.FLAG_CANCEL_CURRENT);
         Calendar calendar = Calendar.getInstance();
 

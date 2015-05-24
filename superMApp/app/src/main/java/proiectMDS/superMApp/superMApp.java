@@ -207,7 +207,7 @@ public class superMApp extends Activity
 								//also add to file
 								trackedEditor.clear();
 								trackedEditor.putInt("TRACKED_NUM", trackedList.size() );
-								for(int i=0; i<supervisorList.size(); i++)
+								for(int i=0; i<trackedList.size(); i++)
 									trackedEditor.putString( Integer.toString(i), trackedList.get(i) );
 								trackedEditor.commit();
 
