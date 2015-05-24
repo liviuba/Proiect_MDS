@@ -8,10 +8,10 @@ import android.util.Log;
 
 public class AlarmReceiver extends BroadcastReceiver {
 
+    public static final String SOME_ACTION = "proiectMDS.superMApp.ACTION";
     public void onReceive(Context context, Intent intent) {
-        String SOMEACTION = "proiectMDS.superMApp.ACTION";
         Log.i("AlarmReceiver", "in AlarmReceiver");
-        if (SOMEACTION.equals(intent.getAction())) {
+        if (SOME_ACTION.equals(intent.getAction())) {
             Intent localIntent = new Intent(context, SmsStreamService.class);
            // intent.getStringArrayExtra("contacts");
 //                intent.putExtra("number", "lat");

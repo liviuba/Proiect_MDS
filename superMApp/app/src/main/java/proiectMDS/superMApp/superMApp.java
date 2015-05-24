@@ -26,12 +26,8 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
-import java.io.FileOutputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
 import android.content.SharedPreferences.Editor;
 import android.content.SharedPreferences;
-
 import java.util.ArrayList;
 
 public class superMApp extends Activity
@@ -41,13 +37,13 @@ public class superMApp extends Activity
 		final int ADD_TO_SUPERVISOR = 10;
 		final int ADD_TO_TRACKED = 11;
 
-		final String SUPERVISOR_FILENAME = "mySupervisors";
+		static final String SUPERVISOR_FILENAME = "mySupervisors";
 		Editor supervisorsEditor = null;
 
 		final String TRACKED_FILENAME = "myTracked";
 		Editor trackedEditor = null;
 		
-		//specifies in whcih list to put the contact, after login; Can't propagate through from onClick because of PICK_CONTACT_REQUEST
+		//specifies in which list to put the contact, after login; Can't propagate through from onClick because of PICK_CONTACT_REQUEST
 		int tempListSwitch = 0;	
 		String password="tomato";//FIXME: For the sake of baby pandas, store this hashed
 		// Entry format :  <Contact name> | <Contact phone #>
@@ -71,9 +67,10 @@ public class superMApp extends Activity
 			SharedPreferences supervisorsFile = this.getSharedPreferences(SUPERVISOR_FILENAME, 0);
 			int supervisorsNum = supervisorsFile.getInt("SUPERVISORS_NUM", -100);
 			if( supervisorsNum != -100)
-				for(int i=0; i<supervisorsNum; i++)
-					supervisorList.add( supervisorsFile.getString( Integer.toString(i), "Couldn't retrieve supervisor") );
-
+				for(int i=0; i<supervisorsNum; i++) {
+					Log.i("superMApp"," added this : "+supervisorsFile.getString( Integer.toString(i), "Couldn't retrieve supervisor"));
+					supervisorList.add(supervisorsFile.getString(Integer.toString(i), "Couldn't retrieve supervisor"));
+				}
 			setContentView(R.layout.activity_super_mapp);
 
 			Button addSupervisorButton = (Button) findViewById(R.id.add_supervisor);

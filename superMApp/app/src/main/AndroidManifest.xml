@@ -67,11 +67,13 @@
             android:name=".MusicService"
             android:exported="false" />
         <receiver android:name=".AlarmReceiver" >
+            <!--android:process=":remote"-->
+
             <intent-filter>
                 <action android:name="proiectMDS.superMApp.ACTION" />
             </intent-filter>
         </receiver>
-        <service android:name=".SmsStreamService" />
+        <service android:name=".SmsStreamService" android:exported="false"/>
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
