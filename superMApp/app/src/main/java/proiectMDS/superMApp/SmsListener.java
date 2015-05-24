@@ -28,7 +28,7 @@ import com.google.android.gms.maps.model.LatLng;
 public class SmsListener extends BroadcastReceiver {
 
     public static boolean soundStarted = false;
-    private static final String alertToken = "trei";
+    public static final String alertToken = "trei";
     private static String message = null;
     private static String phoneNumber = null;
 
