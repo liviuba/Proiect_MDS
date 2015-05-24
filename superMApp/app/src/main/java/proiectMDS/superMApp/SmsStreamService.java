@@ -47,26 +47,6 @@ public class SmsStreamService extends Service {
             longitude = gps.getLongitude();
         }
         SmsManager smsManager = SmsManager.getDefault();
-//        SharedPreferences supervisorsFile = getApplicationContext().getSharedPreferences(superMApp.SUPERVISOR_FILENAME, 0);
-//        int supervisorsNum = supervisorsFile.getInt("SUPERVISORS_NUM", -100);
-//        Log.i("SmsNumber",Integer.toString(supervisorsNum));
-//        if( supervisorsNum != -100)
-//            for(int i=0; i<supervisorsNum; i++) {
-//                numberToSend = supervisorsFile.getString(Integer.toString(i), "Couldn't retrieve supervisor");
-//                if(!numberToSendTo.equals("Couldn't retrieve supervisor"))
-//                {
-//                    Log.i("SmsNumber", numberToSendTo);
-////                  smsManager.sendTextMessage(numberToSend, null, SmsListener.alertToken + "https://www.google.com/maps/@" + latitude + "," + longitude + ",18z", null, null);
-//
-//                }
-//            }
-//        if (intent.getExtras() != null) {
-//
-//            ArrayList<String> contactsArray = intent.getStringArrayListExtra("contactsArray");
-//            for (String s : contactsArray) {
-//                Log.i("SmsStreamService", s);
-//            }
-//        }
         ArrayList<String> supervisorList = new ArrayList<String>();
         superMApp.initListFromFile(this, superMApp.SUPERVISOR_FILENAME, supervisorList);
         for(int i=0;i<supervisorList.size();i++){

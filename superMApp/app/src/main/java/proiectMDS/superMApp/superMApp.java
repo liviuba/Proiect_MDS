@@ -4,9 +4,9 @@
  * */
 
 /*FIXME
- * file format:
- * SUEPRVISOR ~ <supervisor name> ~ <supervisor_phone#>
- * TRACKED ~ <tracked_name> ~ <tracked_phone#>
+ * Persistent storage format:
+ * ("NUM", # of elements in list)
+ * ("#", list element with that index)
  */
 
 package proiectMDS.superMApp;
@@ -56,6 +56,9 @@ public class superMApp extends Activity
     {
 			super.onCreate(savedInstanceState);
 			setContentView(R.layout.activity_super_mapp);
+
+			trackedList.clear();
+			supervisorList.clear();
 
 			initListFromFile(this,TRACKED_FILENAME, trackedList);
 			initListFromFile(this,SUPERVISOR_FILENAME, supervisorList);
@@ -226,7 +229,6 @@ public class superMApp extends Activity
 	}
 
 	public static ArrayList initListFromFile(Context context,String filename, ArrayList<String> list){
-//		Editor fileEditor = context.getSharedPreferences(filename, 0).edit();
 		SharedPreferences myFile = context.getSharedPreferences(filename, 0);
 
 

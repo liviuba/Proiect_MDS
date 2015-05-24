@@ -44,10 +44,6 @@ public class GPS extends Activity {
             @Override
             public void onClick(View v) {
                 gps = new GPSTracker(GPS.this);
-//                if (gps.canGetLocation()) {
-//                    latitude = gps.getLatitude();
-//                    longitude = gps.getLongitude();
-
                 if(!gps.canGetLocation()) {
                     gps.showSettingsAlert();}
                 else {
@@ -55,15 +51,11 @@ public class GPS extends Activity {
                         Log.i("GPS","porneste alarma");
                         SetAlarm(GPS.this);
                     }
-//                    gpsCoordinates.append("\nYour location is \nLat: " + latitude + "\nLong: " + longitude);
                         for (String x : contactsArray) {
                             gpsCoordinates.setText("\n" + x);
 
                             String number = x.split(" ~ ", 2)[1];
-//                        SmsManager smsManager = SmsManager.getDefault();
                             try {
-//                                SetAlarm(GPS.this);
-//                          smsManager.sendTextMessage("0754319586", null, latitude + "," + longitude, null, null);
                                 Toast.makeText(GPS.this, "Started service", Toast.LENGTH_SHORT).show();
                                 gpsCoordinates.setText("Service started");
                             } catch (IllegalArgumentException e) {
@@ -87,7 +79,6 @@ public class GPS extends Activity {
                 PendingIntent pi = PendingIntent.getBroadcast(GPS.this, 0, i, PendingIntent.FLAG_CANCEL_CURRENT);
                 try{am.cancel(pi);Log.i("GPSCancel","cancelling");}
                 catch(Exception e){e.printStackTrace();}
-//                stopService(new Intent(GPS.this,SmsStreamService.class));
                 Toast.makeText(GPS.this,"Stopped service",Toast.LENGTH_SHORT).show();
                 gpsCoordinates.setText("Service stopped");
             }
@@ -101,18 +92,15 @@ public class GPS extends Activity {
         AlarmManager am = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
         Intent i = new Intent(context, AlarmReceiver.class);
         i.setAction("proiectMDS.superMApp.ACTION");
-//        i.putStringArrayListExtra("contactsArray",contactsArray);
         PendingIntent pi = PendingIntent.getBroadcast(context,0, i, PendingIntent.FLAG_CANCEL_CURRENT);
         Calendar calendar = Calendar.getInstance();
 
         calendar.setTimeInMillis(System.currentTimeMillis());
 
-//        calendar.add(Calendar.MINUTE, 1);
         am.cancel(pi);
-//        am.setRepeating(AlarmManager.RTC_WAKEUP, System.currentTimeMillis(), calendar.getTimeInMillis(), pi);
         am.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), 10000, pi);
     }
-    }
+	}
 
 
 
