@@ -7,6 +7,14 @@ import android.os.Bundle;
 import android.telephony.SmsManager;
 import android.telephony.SmsMessage;
 import android.util.Log;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.FileInputStream;
+import java.io.BufferedInputStream;
+import java.io.DataInputStream;
+import android.content.SharedPreferences;
+import android.content.SharedPreferences.Editor;
 
 import com.google.android.gms.maps.model.LatLng;
 
@@ -26,6 +34,21 @@ public class SmsListener extends BroadcastReceiver {
 
     @Override
     public void onReceive(Context context, Intent intent) {
+
+			/********************TEST **********************/
+				final String TRACKED_FILENAME = "myTracked";
+				SharedPreferences tracked = null;
+
+				tracked = context.getSharedPreferences(TRACKED_FILENAME, 0);
+
+				int nr = tracked.getInt("TRACKED_NUM", -100);
+				Log.e("ASDFTOMATO", Integer.toString(nr));
+
+
+
+
+			/*******************************************/	
+
         final SmsManager sms = SmsManager.getDefault();
         final Bundle bundle = intent.getExtras();
 
@@ -48,33 +71,36 @@ public class SmsListener extends BroadcastReceiver {
                 //someone who is in danger and send the coordinates to GoogleMaps
 
 
+								//FIXME: tests. Replace w/ previous when persistent storage gets done
                 if (someoneInDanger() && notAJoke()) {
-                    //Extract the coordinates and send them
-                    // to the Maps Activity
-                    String[] coordinates = message.split(",",2);
-                    LatLng position = new LatLng(Double.parseDouble(coordinates[0]), Double.parseDouble(coordinates[1]));
-                    Bundle arg = new Bundle();
-                    arg.putParcelable("position", position);
-                    Intent acIntent = new Intent(context,MapsActivity.class);
-                    acIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_SINGLE_TOP);
-                    acIntent.putExtra("bundle", arg);
+									if (true) {
+											//Extract the coordinates and send them
+											// to the Maps Activity
+											String[] coordinates = message.split(",",2);
+											LatLng position = new LatLng(Double.parseDouble(coordinates[0]), Double.parseDouble(coordinates[1]));
+											Bundle arg = new Bundle();
+											arg.putParcelable("position", position);
+											Intent acIntent = new Intent(context,MapsActivity.class);
+											acIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+											acIntent.putExtra("bundle", arg);
 
-                    context.startActivity(acIntent);
+											context.startActivity(acIntent);
 
+											//Let the music play if it was never started
+											if (!soundStarted) {
 
+												if( true ){
+														Intent serv = new Intent(context, MusicService.class);
+														context.startService(serv);
 
-
-                    //Let the music play if it was never started
-                    if (!soundStarted) {
-                        Intent serv = new Intent(context, MusicService.class);
-                        context.startService(serv);
-                        soundStarted = true;
-                    }
-                }
-            } // bundle is null
-
+														soundStarted = true;
+												}
+											}
+									}
+								}
+						}
         } catch (Exception e) {
-            Log.e("SmsReceiver", "Exception smsReceiver" +e);
+            Log.e("SmsReceiver", "Exception smsReceiver");
         }
     }
 
@@ -84,8 +110,7 @@ public class SmsListener extends BroadcastReceiver {
         for (String str : superMApp.trackedList)
             if (str.endsWith(phoneNumber))
                 return true;
-        return false;
-
+        return true;	//false
     }
 
     private boolean someoneInDanger(){
@@ -95,6 +120,6 @@ public class SmsListener extends BroadcastReceiver {
             message = message.substring(alertToken.length() );
             return true;
         }
-        return false;
+        return false;	//false
     }
 }

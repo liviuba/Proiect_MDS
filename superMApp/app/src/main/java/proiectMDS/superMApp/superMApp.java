@@ -3,8 +3,15 @@
  * just put an IntExtra for which list to store the result in
  * */
 
+/*FIXME
+ * file format:
+ * SUEPRVISOR ~ <supervisor name> ~ <supervisor_phone#>
+ * TRACKED ~ <tracked_name> ~ <tracked_phone#>
+ */
+
 package proiectMDS.superMApp;
 
+import android.content.Context;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -19,6 +26,11 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
+import java.io.FileOutputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import android.content.SharedPreferences.Editor;
+import android.content.SharedPreferences;
 
 import java.util.ArrayList;
 
@@ -28,8 +40,14 @@ public class superMApp extends Activity
 		final int AUTHENTICATE_REQUEST = 2;
 		final int ADD_TO_SUPERVISOR = 10;
 		final int ADD_TO_TRACKED = 11;
+
+		final String SUPERVISOR_FILENAME = "mySupervisors";
+		Editor supervisorsEditor = null;
+
+		final String TRACKED_FILENAME = "myTracked";
+		Editor trackedEditor = null;
 		
-			//specifies in whcih list to put the contact, after login; Can't propagate through from onClick because of PICK_CONTACT_REQUEST
+		//specifies in whcih list to put the contact, after login; Can't propagate through from onClick because of PICK_CONTACT_REQUEST
 		int tempListSwitch = 0;	
 		String password="tomato";//FIXME: For the sake of baby pandas, store this hashed
 		// Entry format :  <Contact name> | <Contact phone #>
@@ -40,16 +58,32 @@ public class superMApp extends Activity
     public void onCreate(Bundle savedInstanceState)
     {
 			super.onCreate(savedInstanceState);
-			setContentView(R.layout.main);
+			supervisorsEditor = this.getSharedPreferences(SUPERVISOR_FILENAME, 0).edit();
+			trackedEditor = this.getSharedPreferences(TRACKED_FILENAME, 0).edit();
+
+			//initialize tracked/supervisor list, if any
+			SharedPreferences trackedFile = this.getSharedPreferences(TRACKED_FILENAME, 0);
+			int trackedNum = trackedFile.getInt("TRACKED_NUM", -100);
+			if(trackedNum != -100)// -100 is the default value, in case no such key is found
+				for(int i=0; i<trackedNum; i++)
+					trackedList.add( trackedFile.getString( Integer.toString(i), "Couldn't retrieve tracked" ) );
+
+			SharedPreferences supervisorsFile = this.getSharedPreferences(SUPERVISOR_FILENAME, 0);
+			int supervisorsNum = supervisorsFile.getInt("SUPERVISORS_NUM", -100);
+			if( supervisorsNum != -100)
+				for(int i=0; i<supervisorsNum; i++)
+					supervisorList.add( supervisorsFile.getString( Integer.toString(i), "Couldn't retrieve supervisor") );
+
+			setContentView(R.layout.activity_super_mapp);
 
 			Button addSupervisorButton = (Button) findViewById(R.id.add_supervisor);
-			addSupervisorButton.setOnClickListener(new View.OnClickListener(){
+			addSupervisorButton.setOnClickListener(new View.OnClickListener() {
 				@Override
-				public void onClick(View v){
-					Log.e("superMApp:OnClick","Picking a contact");
+				public void onClick(View v) {
+					Log.e("superMApp:OnClick", "Picking a contact");
 					tempListSwitch = ADD_TO_SUPERVISOR;
 					Intent pickContactIntent = new Intent(Intent.ACTION_PICK, ContactsContract.Contacts.CONTENT_URI);
-					startActivityForResult( pickContactIntent, PICK_CONTACT_REQUEST);
+					startActivityForResult(pickContactIntent, PICK_CONTACT_REQUEST);
 				}
 			});
 
@@ -60,6 +94,17 @@ public class superMApp extends Activity
 					tempListSwitch = ADD_TO_TRACKED;
 					Intent pickContactIntent = new Intent(Intent.ACTION_PICK, ContactsContract.Contacts.CONTENT_URI);
 					startActivityForResult( pickContactIntent, PICK_CONTACT_REQUEST);
+				}
+			});
+			Button startServiceButton = (Button)findViewById(R.id.startServiceButton);
+			startServiceButton.setOnClickListener(new View.OnClickListener() {
+				@Override
+				public void onClick(View v) {
+					Bundle contactsArrayBundle = new Bundle();
+					contactsArrayBundle.putStringArrayList("supervisorList",supervisorList);
+					Intent gpsIntent = new Intent(superMApp.this, GPS.class);
+					gpsIntent.putExtras(contactsArrayBundle);
+					startActivity(gpsIntent);
 				}
 			});
     }
@@ -84,6 +129,15 @@ public class superMApp extends Activity
 						@Override
 						public void onClick(DialogInterface dialog, int which){
 							supervisorList.remove(position_final);
+
+							//also add to file
+							supervisorsEditor.clear();
+							supervisorsEditor.putInt("SUPERVISORS_NUM", supervisorList.size() );
+							for(int i=0; i<supervisorList.size(); i++)
+								supervisorsEditor.putString( Integer.toString(i), supervisorList.get(i) );
+							supervisorsEditor.commit();
+
+							//update screen
 							supervisorAdapter.notifyDataSetChanged();
 						}
 					});
@@ -107,6 +161,15 @@ public class superMApp extends Activity
 						@Override
 						public void onClick(DialogInterface dialog, int which){
 							trackedList.remove(position_final);
+
+							//also add to file
+							trackedEditor.clear();
+							trackedEditor.putInt("TRACKED_NUM", trackedList.size() );
+							for(int i=0; i<supervisorList.size(); i++)
+								trackedEditor.putString( Integer.toString(i), trackedList.get(i) );
+							trackedEditor.commit();
+
+							//show on screen
 							trackedAdapter.notifyDataSetChanged();
 						}
 					});
@@ -127,14 +190,30 @@ public class superMApp extends Activity
 					}
 					else{
 						String newContact = new String();
-						newContact = data.getExtras().getString("CONTACT_NAME") + " | "+ data.getExtras().getString("CONTACT_PHONE_NUM");
+						newContact = data.getExtras().getString("CONTACT_NAME") + " ~ "+ data.getExtras().getString("CONTACT_PHONE_NUM");
 
 						switch(tempListSwitch){
 							case ADD_TO_SUPERVISOR:
 								supervisorList.add(newContact);
+								
+								//also add to file
+								supervisorsEditor.clear();
+								supervisorsEditor.putInt("SUPERVISORS_NUM", supervisorList.size() );
+								for(int i=0; i<supervisorList.size(); i++)
+									supervisorsEditor.putString( Integer.toString(i), supervisorList.get(i) );
+								supervisorsEditor.commit();
+
 								break;
 							case ADD_TO_TRACKED:
 								trackedList.add(newContact);
+
+								//also add to file
+								trackedEditor.clear();
+								trackedEditor.putInt("TRACKED_NUM", trackedList.size() );
+								for(int i=0; i<supervisorList.size(); i++)
+									trackedEditor.putString( Integer.toString(i), trackedList.get(i) );
+								trackedEditor.commit();
+
 								break;
 						}
 						tempListSwitch = 0;

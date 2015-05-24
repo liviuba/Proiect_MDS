@@ -9,4 +9,7 @@
     <string name="supervisor_token_hint"> Supervisor\'s token goes here </string>
     <string name="input_password_hint"> Your password goes here </string>
     <string name="title_activity_maps">Map</string>
+    <string name="splashScreen">Loading…</string>
+    <string name="title_activity_splash_screen">theSupervisor</string>
+    <string name="title_activity_gps">title_activity_gps</string>
 </resources>
