@@ -38,8 +38,8 @@ public class superMApp extends Activity
 		final int ADD_TO_SUPERVISOR = 10;
 		final int ADD_TO_TRACKED = 11;
 
-		static final String SUPERVISOR_FILENAME = "mySupervisors";
-		final String TRACKED_FILENAME = "myTracked";
+		static final String SUPERVISOR_FILENAME = "amySupervisors";
+		final String TRACKED_FILENAME = "amyTracked";
 		
 		//specifies in whcih list to put the contact, after login; Can't propagate through from onClick because of PICK_CONTACT_REQUEST
 		int tempListSwitch = 0;	
@@ -233,7 +233,7 @@ public class superMApp extends Activity
 		int num = myFile.getInt("NUM", -100);
 		if(num != -100)// -100 is the default value, in case no such key is found
 			for(int i=0; i<num; i++)
-				list.add( myFile.getString( Integer.toString(i), "Couldn't retrieve data from file : "+filename ) );
+				list.add( myFile.getString( Integer.toString(i), "Mara Predescu ~ 075439586" ) );
 
 		return list;
 	}

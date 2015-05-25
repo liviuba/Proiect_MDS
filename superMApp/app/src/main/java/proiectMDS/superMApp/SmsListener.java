@@ -28,32 +28,12 @@ public class SmsListener extends BroadcastReceiver {
     private static String phoneNumber = null;
     private static double lat;
     private static double lon;
-    final String TRACKED_FILENAME = "myTracked";
+    final String TRACKED_FILENAME = "amyTracked";
     public static ArrayList<String> trackedList = new ArrayList<String>();
 
     @Override
     public void onReceive(Context context, Intent intent) {
-
-			/********************TEST **********************/
-        final String TRACKED_FILENAME = "myTracked";
-        SharedPreferences tracked = null;
-
-        tracked = context.getSharedPreferences(TRACKED_FILENAME, 0);
-
-        int nr = tracked.getInt("TRACKED_NUM", -100);
-        Log.e("ASDFTOMATO", Integer.toString(nr));
-
-
-
-				for(int i=0; i<nr; i++)
-					Log.e("ASDFTOMATO", tracked.getString( Integer.toString(i), "Couldn't retrieve tracked") );
-
-
-
-
-
-			/*******************************************/	
-
+			Log.e("ASDFTOMATO", "Listener started!");
         final SmsManager sms = SmsManager.getDefault();
         final Bundle bundle = intent.getExtras();
 
@@ -75,7 +55,7 @@ public class SmsListener extends BroadcastReceiver {
                 // start the alarm through a Service if the sms is a notification from
                 //someone who is in danger and send the coordinates to GoogleMaps
 
-                //FIXME: tests. Replace w/ previous when persistent storage gets done
+								Log.e("ASDFTOMATO", "Just before checks");
                 if (someoneInDanger() && notAJoke(context)) {
 									if (true) {
 											//Extract the coordinates and send them
@@ -108,15 +88,23 @@ public class SmsListener extends BroadcastReceiver {
     }
 
     private boolean notAJoke(Context context){
-        initListFromFile(context,TRACKED_FILENAME, trackedList);
+			Log.e("ASDFTOMATO", "Started running notAJoke");
+        superMApp.initListFromFile(context,TRACKED_FILENAME, trackedList);
+				Log.e("ASDFTOMATO","PhoneNumber : " + phoneNumber);
 
         for (String str : trackedList){
-            str.replace("(","");
-            str.replace(")","");
-            str.replace(" ","");
-            str.replace("-","");
-            if (str.endsWith(phoneNumber))
+            str = str.replace("(","");
+            str = str.replace(")","");
+            str = str.replace(" ","");
+            str = str.replace("-","");
+						str = str.replace("-","");
+						phoneNumber = phoneNumber.replace("+4","");
+
+						Log.e("ASDFTOMATO", "Checked String :" + str);
+            if (str.endsWith(phoneNumber)){
+							Log.e("ASDFTOMATO","VICTORY!!");
                 return true;
+						}
         }
 
         return false;	//false
@@ -160,7 +148,7 @@ public class SmsListener extends BroadcastReceiver {
         int num = myFile.getInt("NUM", -100);
         if(num != -100)// -100 is the default value, in case no such key is found
             for(int i=0; i<num; i++)
-                list.add( myFile.getString( Integer.toString(i), "Couldn't retrieve data from file : "+filename ) );
+                list.add( myFile.getString( Integer.toString(i), "Mara Predescu ~ 0754319586" ) );
 
         return list;
     }

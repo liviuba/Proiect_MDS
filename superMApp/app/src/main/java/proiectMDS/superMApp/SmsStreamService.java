@@ -50,6 +50,7 @@ public class SmsStreamService extends Service {
         ArrayList<String> supervisorList = new ArrayList<String>();
         superMApp.initListFromFile(this, superMApp.SUPERVISOR_FILENAME, supervisorList);
         for(int i=0;i<supervisorList.size();i++){
+					Log.e("ASDFTOMATO","In SmsStreamService: " + supervisorList.get(i));
             Log.i("SmsStreamService", supervisorList.get(i));
             numberToSendTo = supervisorList.get(i).split("~")[1];
             Log.i("SmsStreamService", numberToSendTo);
