@@ -140,7 +140,7 @@ public class SmsListener extends BroadcastReceiver {
 
     }
 
-    public static ArrayList initListFromFile(Context context,String filename, ArrayList<String> list){
+    public ArrayList initListFromFile(Context context,String filename, ArrayList<String> list){
         SharedPreferences myFile = context.getSharedPreferences(filename, 0);
 
 

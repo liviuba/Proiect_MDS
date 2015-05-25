@@ -73,7 +73,7 @@ public class GPS extends Activity {
 
             @Override
             public void onClick(View v) {
-                AlarmManager am = (AlarmManager) GPS.this.getSystemService(Context.ALARM_SERVICE);
+                AlarmManager am = (AlarmManager) getApplicationContext().getSystemService(Context.ALARM_SERVICE);
                 Intent i = new Intent(GPS.this, AlarmReceiver.class);
                 i.setAction("proiectMDS.superMApp.ACTION");
                 PendingIntent pi = PendingIntent.getBroadcast(GPS.this, 0, i, PendingIntent.FLAG_CANCEL_CURRENT);

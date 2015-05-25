@@ -228,7 +228,6 @@ public class superMApp extends Activity
 	public static ArrayList initListFromFile(Context context,String filename, ArrayList<String> list){
 		SharedPreferences myFile = context.getSharedPreferences(filename, 0);
 
-
 		//initialize tracked/supervisor list, if any
 		int num = myFile.getInt("NUM", -100);
 		if(num != -100)// -100 is the default value, in case no such key is found

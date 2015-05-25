@@ -60,7 +60,7 @@ public class SmsStreamService extends Service {
             Log.i("SmsStreamService", "alarma");
 
 
-            return START_STICKY;
+            return START_NOT_STICKY;
         }
 
 
